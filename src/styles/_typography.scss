@@ -1,0 +1,14 @@
+// Font sizes
+$font-sizes: (
+  xs: 12px,
+  sm: 14px,
+  base: 16px,
+  md: 18px,
+  lg: 24px,
+  xl: 32px,
+  xxl: 48px,
+);
+
+@mixin font-size($size) {
+  font-size: map-get($font-sizes, $size);
+}

@@ -1,0 +1,13 @@
+@import "./reset";
+@import "./variables";
+@import "./breakpoints";
+@import "./mixins";
+@import "./typography";
+@import "./helpers";
+@import "./colors";
+
+body {
+  font-family: $font-family-base;
+  color: $text-primary;
+  background-color: $background;
+}
