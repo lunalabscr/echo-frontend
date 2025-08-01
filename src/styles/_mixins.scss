@@ -1,4 +1,5 @@
 @import "variables";
+@import "breakpoints";
 
 // Mixin for media queries
 @mixin respond-to($breakpoint) {

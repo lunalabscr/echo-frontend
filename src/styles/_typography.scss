@@ -4,9 +4,11 @@ $font-sizes: (
   sm: 14px,
   base: 16px,
   md: 18px,
+  2md: 22px,
   lg: 24px,
   xl: 32px,
   xxl: 48px,
+  2xl: 64px,
 );
 
 @mixin font-size($size) {

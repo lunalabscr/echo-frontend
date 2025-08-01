@@ -1,0 +1,32 @@
+@use "@styles/mixins";
+@use "@styles/typography";
+@use "@styles/colors";
+
+.hero {
+  @include mixins.container;
+  &__text {
+    @include mixins.flex-center;
+    flex-direction: column;
+    padding-block: 52px;
+  }
+
+  &__title {
+    font-family: "glacial-bold";
+    @include typography.font-size(2md);
+    @include mixins.respond-to(2xs) {
+      @include typography.font-size(xl);
+    }
+    font-weight: bold;
+  }
+
+  &__subtitle {
+    font-family: "noracle";
+    @include typography.font-size(2md);
+    @include mixins.respond-to(2xs) {
+      @include typography.font-size(xl);
+    }
+    color: colors.$text-secondary;
+    text-align: center;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,30 @@
+@use "@styles/mixins";
+@use "@styles/colors";
+
+.header {
+  @include mixins.container;
+  @include mixins.flex-center;
+  height: 64px;
+
+  &__items {
+    @include mixins.flex-center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__item-wrapper {
+    @include mixins.flex-center;
+    gap: 15px;
+  }
+
+  &__item {
+    color: colors.$text-secondary;
+  }
+
+  &__large-item {
+    display: none;
+    @include mixins.respond-to(md) {
+      display: block;
+    }
+  }
+}
