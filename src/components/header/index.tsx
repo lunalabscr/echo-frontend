@@ -34,12 +34,14 @@ export const Header = () => {
       <nav className={styles.header__items}>
         <div className={styles["header__item-wrapper"]}>
           <a
+            href="#home"
             className={styles.header__item}
             onClick={() => handleHomeClick("home")}
           >
             {t("home")}
           </a>
           <a
+            href="#about"
             className={clsx(styles.header__item, styles["header__large-item"])}
             onClick={() => handleHomeClick("about")}
           >
