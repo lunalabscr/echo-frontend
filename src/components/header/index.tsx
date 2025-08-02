@@ -16,7 +16,7 @@ export const Header = () => {
             About
           </a>
         </div>
-        <a>AVV</a>
+        <a href="#home">AVV</a>
         <div className={styles["header__item-wrapper"]}>
           <a
             className={clsx(styles.header__item, styles["header__large-item"])}
