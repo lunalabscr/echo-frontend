@@ -63,11 +63,6 @@ export default function SEO({
       />
 
       <link rel="icon" href="/favicon.ico" />
-      <script
-        src="https://analytics.ahrefs.com/analytics.js"
-        data-key="GDwGvaXmWOPZHtpREFIsKQ"
-        async
-      ></script>
       <script type="application/ld+json">
         {`
           {
@@ -82,7 +77,9 @@ export default function SEO({
               "@type": "PostalAddress",
               "addressCountry": "CR",
               "addressLocality": "La Fortuna",
-              "addressRegion": "Alajuela"
+              "addressRegion": "Alajuela",
+              "postalCode":"21007",
+              "streetAddress":"La Fortuna, Alajuela, Costa Rica"
             },
             "telephone": "+506-8554-3228"
           }
