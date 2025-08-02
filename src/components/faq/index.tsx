@@ -5,23 +5,24 @@ import {
   AccordionTrigger,
 } from "@radix-ui/react-accordion";
 import styles from "./index.module.scss";
+import { useTranslation } from "react-i18next";
 
 export const Faq = () => {
+  const { t } = useTranslation("translation", { keyPrefix: "faq" });
   const accordionFaq = [
     {
-      trigger: "How close are you to the Arenal Volcano?",
-      content: "Yes, we are super close to the volcano",
+      trigger: t("question1"),
+      content: t("answer1"),
       value: "trigger-1",
     },
     {
-      trigger: "Is there on-site parking?",
-      content: "Yes, there is on-site parking for small and big vehicules",
+      trigger: t("question2"),
+      content: t("answer2"),
       value: "trigger-2",
     },
     {
-      trigger: "Are local tours and activities available?",
-      content:
-        "We are located in the heart of La Fortuna, you'll have plenty of nearby activities",
+      trigger: t("question3"),
+      content: t("answer3"),
       value: "trigger-3",
     },
   ];

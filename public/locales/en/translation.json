@@ -30,6 +30,14 @@
     "whatsapp": "Whatsapp",
     "experience": "Experience"
   },
+  "faq": {
+    "question1": "How close are you to Arenal Volcano?",
+    "answer1": "We are just a 10-minute drive from the entrance to Arenal Volcano National Park and less than 5 minutes from downtown La Fortuna. You’ll enjoy stunning views of the volcano right from the property!",
+    "question2": "Is there onsite parking?",
+    "answer2": "Yes, we offer free private parking on-site for all guests. The area is secure and easily accessible for all vehicle types.",
+    "question3": "Are local tours and activities available?",
+    "answer3": "Absolutely! We can help you book popular activities like hot springs, ziplining, waterfall hikes, volcano tours, and more. Ask us for recommendations — we love helping guests plan their adventures!"
+  },
   "info": {
     "wa-text": "Hi! I’d love to book a stay in La Fortuna. Could you please share availability and details?"
   },

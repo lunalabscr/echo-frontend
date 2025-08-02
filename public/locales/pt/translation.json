@@ -30,6 +30,14 @@
     "whatsapp": "Whatsapp",
     "experience": "Experiência"
   },
+  "faq": {
+    "question1": "Quão perto vocês estão do Vulcão Arenal?",
+    "answer1": "Estamos a apenas 10 minutos de carro da entrada do Parque Nacional do Vulcão Arenal e a menos de 5 minutos do centro de La Fortuna. Você poderá apreciar vistas incríveis do vulcão direto da propriedade!",
+    "question2": "Tem estacionamento no local?",
+    "answer2": "Sim, oferecemos estacionamento privativo gratuito no local para todos os hóspedes. A área é segura e de fácil acesso para todos os tipos de veículos.",
+    "question3": "Há passeios e atividades locais disponíveis?",
+    "answer3": "Com certeza! Podemos te ajudar a reservar atividades populares como águas termais, tirolesa, trilhas para cachoeiras, passeios ao vulcão e muito mais. Fale conosco para recomendações — adoramos ajudar nossos hóspedes a planejar suas aventuras!"
+  },
   "info": {
     "wa-text": "Oi! Gostaria muito de reservar uma estadia em La Fortuna. Você pode me enviar a disponibilidade e os detalhes?"
   },
