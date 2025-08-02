@@ -30,5 +30,10 @@
   },
   "info": {
     "wa-text": "¡Hola! Me encantaría reservar una estadía en La Fortuna. ¿Podrías compartirme la disponibilidad y los detalles? "
+  },
+  "seo": {
+    "homeTitle": "Bienvenido a tu escape al volcán",
+    "homeDescription": "Reserva tu estadía cerca del Volcán Arenal, Costa Rica.",
+    "keywords": "Arenal, Costa Rica, Volcán, Villas, Hotel, Naturaleza, Viaje"
   }
 }

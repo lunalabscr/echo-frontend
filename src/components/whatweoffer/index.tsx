@@ -35,7 +35,11 @@ export const WhatWeOffer = () => {
               [styles["offers__order"]]: offer.id == "offer-2",
             })}
           >
-            <img className={styles["offers__image"]} src={offer.image} />
+            <img
+              alt={`${offer.title} image`}
+              className={styles["offers__image"]}
+              src={offer.image}
+            />
           </div>
           <div>
             <p className={styles.offers__text}>{offer.title}</p>

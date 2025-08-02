@@ -1,35 +1,87 @@
-import type { SEOProps } from "@/types/SEO";
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
+
+interface SEOProps {
+  titleKey: string; // i18n key
+  descriptionKey?: string;
+  image?: string;
+  path?: string; // URL path after /en or /es etc.
+}
 
 export default function SEO({
-  title,
-  description = "Discover Arenal Volcanic Villas – your nature escape in Costa Rica. Comfortable stays near the volcano with breathtaking views.",
-  keywords = "Arenal, Costa Rica, Villas, Volcano, La Fortuna, Nature, Travel, Hotel, Stay",
-  url = "https://www.arenalvolcanicvillas.com/",
+  titleKey,
+  descriptionKey = "defaultDescription",
   image = "https://www.arenalvolcanicvillas.com/og-image.jpg",
+  path = "",
 }: SEOProps) {
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language || "en";
+  const fullUrl = `https://www.arenalvolcanicvillas.com/${lang}${path}`;
+
   return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
+    <Helmet htmlAttributes={{ lang }}>
+      <title>{`${t(titleKey)} | Arenal Volcanic Villas`}</title>
+      <meta name="description" content={t(descriptionKey)} />
+      <meta name="keywords" content={t("seo.keywords")} />
       <meta name="author" content="Arenal Volcanic Villas" />
-      <link rel="canonical" href={url} />
+      <link rel="canonical" href={fullUrl} />
 
       {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
+      <meta
+        property="og:title"
+        content={`${t(titleKey)} | Arenal Volcanic Villas`}
+      />
+      <meta property="og:description" content={t(descriptionKey)} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={url} />
+      <meta property="og:url" content={fullUrl} />
       <meta property="og:image" content={image} />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
+      <meta
+        name="twitter:title"
+        content={`${t(titleKey)} | Arenal Volcanic Villas`}
+      />
+      <meta name="twitter:description" content={t(descriptionKey)} />
       <meta name="twitter:image" content={image} />
 
+      {/* hreflang links for alternate languages */}
+      <link
+        rel="alternate"
+        hrefLang="en"
+        href={`https://www.arenalvolcanicvillas.com/en${path}`}
+      />
+      <link
+        rel="alternate"
+        hrefLang="es"
+        href={`https://www.arenalvolcanicvillas.com/es${path}`}
+      />
+      <link
+        rel="alternate"
+        hrefLang="pt"
+        href={`https://www.arenalvolcanicvillas.com/pt${path}`}
+      />
+
       <link rel="icon" href="/favicon.ico" />
+      <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Hotel",
+            "name": "Arenal Volcanic Villas",
+            "description": "${t(descriptionKey)}",
+            "url": "${fullUrl}",
+            "image": "${image}",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "CR",
+              "addressLocality": "La Fortuna",
+              "addressRegion": "Alajuela"
+            },
+            "telephone": "+506-XXXX-XXXX"
+          }
+        `}
+      </script>
     </Helmet>
   );
 }
