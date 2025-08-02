@@ -6,6 +6,17 @@ export const Header = () => {
   const { t } = useTranslation("translation", {
     keyPrefix: "header",
   });
+  const { t: info } = useTranslation("translation", {
+    keyPrefix: "info",
+  });
+
+  const phone = import.meta.env.VITE_WHATSAPP_PHONE || "";
+  const message = encodeURIComponent(info("wa-text"));
+
+  const handleClick = () => {
+    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+  };
+
   return (
     <header className={styles.header}>
       <nav className={styles.header__items}>
@@ -28,7 +39,7 @@ export const Header = () => {
           >
             {t("gallery")}
           </a>
-          <a className={styles.header__item} href="#book">
+          <a onClick={handleClick} className={styles.header__item} href="#book">
             {t("book-now")}
           </a>
         </div>
