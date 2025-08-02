@@ -1,0 +1,31 @@
+{
+  "header": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "gallery": "Galería",
+    "booknow": "Reservar ahora"
+  },
+  "hero": {
+    "stay-near": "Hospédate cerca del Arenal.",
+    "escape-fortuna": "Tu escape costarricense a La Fortuna"
+  },
+  "book": {
+    "ready": "¿Listo para Pura Vida?",
+    "book": "Reserva tu escape a La Fortuna ahora.",
+    "book-stay": "Reservar estadía"
+  },
+  "whatweoffer": {
+    "volcano-views": "Vistas impresionantes del volcán",
+    "volcano-views-desc": "Despierta cada mañana con vistas increíbles al Volcán Arenal desde tu ventana.",
+    "modern-comfort": "Comodidad moderna",
+    "modern-comfort-desc": "Disfruta de aire acondicionado, wifi y camas cómodas en un entorno natural y tranquilo.",
+    "adv-door": "Aventura a tu puerta",
+    "adv-door-desc": "Acceso fácil a aguas termales, senderos y aventuras en la selva tropical."
+  },
+  "footer": {
+    "connect": "Conectar",
+    "instagram": "Instagram",
+    "whatsapp": "Whatsapp",
+    "experience": "Experiencia"
+  }
+}

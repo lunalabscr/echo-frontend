@@ -1,2 +1,16 @@
+@use "@styles/mixins";
+@use "@styles/typography";
+@use "@styles/colors";
+
 .footer {
+  @include mixins.container;
+  margin-block: 50px;
+
+  &__text {
+    font-weight: 700;
+  }
+
+  &__subtext {
+    color: colors.$text-third;
+  }
 }

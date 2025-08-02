@@ -1,7 +1,9 @@
 import SEO from "@/components/SEO";
+import { Book } from "@/components/book/Index";
 
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
+import { WhatWeOffer } from "@/components/whatweoffer";
 import { Header } from "@components/header";
 
 export const Index = () => {
@@ -14,6 +16,8 @@ export const Index = () => {
       <Header />
       <main>
         <Hero />
+        <WhatWeOffer />
+        <Book />
       </main>
       <Footer />
     </>

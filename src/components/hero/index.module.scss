@@ -4,8 +4,11 @@
 
 .hero {
   @include mixins.container;
+  scroll-margin-top: 80px;
+
   &__text {
     @include mixins.flex-center;
+    height: 100dvh;
     flex-direction: column;
     padding-block: 52px;
   }
@@ -25,7 +28,7 @@
     @include mixins.respond-to(2xs) {
       @include typography.font-size(xl);
     }
-    color: colors.$text-secondary;
+    color: colors.$text-third;
     text-align: center;
     font-weight: bold;
   }
