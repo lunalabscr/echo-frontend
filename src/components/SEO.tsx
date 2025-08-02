@@ -63,6 +63,11 @@ export default function SEO({
       />
 
       <link rel="icon" href="/favicon.ico" />
+      <script
+        src="https://analytics.ahrefs.com/analytics.js"
+        data-key="GDwGvaXmWOPZHtpREFIsKQ"
+        async
+      ></script>
       <script type="application/ld+json">
         {`
           {
@@ -72,13 +77,14 @@ export default function SEO({
             "description": "${t(descriptionKey)}",
             "url": "${fullUrl}",
             "image": "${image}",
+            "priceRange": "$100 - $300",
             "address": {
               "@type": "PostalAddress",
               "addressCountry": "CR",
               "addressLocality": "La Fortuna",
               "addressRegion": "Alajuela"
             },
-            "telephone": "+506-XXXX-XXXX"
+            "telephone": "+506-8554-3228"
           }
         `}
       </script>
