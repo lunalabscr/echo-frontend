@@ -7,7 +7,9 @@
   },
   "hero": {
     "stay-near": "Hospédate cerca del Arenal.",
-    "escape-fortuna": "Tu escape costarricense a La Fortuna"
+    "escape-fortuna": "Tu escape costarricense a La Fortuna",
+    "hero-text": "A minutos del Volcán Arenal, nuestro Airbnb combina comodidad moderna con la belleza de Costa Rica.",
+    "hero-sub": "Sumérgete en la naturaleza, relájate en un entorno tranquilo y explora lo mejor de La Fortuna."
   },
   "book": {
     "ready": "¿Listo para Pura Vida?",

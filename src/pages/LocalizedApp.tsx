@@ -1,4 +1,5 @@
 import { Book } from "@/components/book/Index";
+import { Faq } from "@/components/faq";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
@@ -37,6 +38,7 @@ export const LocalizedApp = () => {
       <main>
         <Hero />
         <WhatWeOffer />
+        <Faq />
         <Book />
       </main>
       <Footer />

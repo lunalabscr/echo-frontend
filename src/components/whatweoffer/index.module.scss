@@ -12,6 +12,7 @@
   &__grid {
     display: grid;
     align-items: center;
+    width: 100%;
     gap: 20px;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
@@ -34,7 +35,7 @@
 
   &__order {
     @include mixins.respond-to(lg) {
-      order: 2;
+      order: 1;
     }
   }
 

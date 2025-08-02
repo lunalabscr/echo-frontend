@@ -28,11 +28,11 @@ export const WhatWeOffer = () => {
 
   return (
     <section className={styles.offers} id="about">
-      {whatWeOffer.map((offer) => (
+      {whatWeOffer.map((offer, index) => (
         <article key={offer.id} className={styles.offers__grid}>
           <div
             className={clsx({
-              [styles["offers__order"]]: offer.id == "offer-2",
+              [styles["offers__order"]]: index % 2 == 0,
             })}
           >
             <img
