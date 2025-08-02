@@ -7,7 +7,8 @@ import SEO from "@/components/SEO";
 import { WhatWeOffer } from "@/components/whatweoffer";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Routes, Route } from "react-router-dom";
+import { Gallery } from "./Gallery";
 
 export const LocalizedApp = () => {
   const { lng } = useParams();
@@ -29,18 +30,40 @@ export const LocalizedApp = () => {
 
   return (
     <>
-      <SEO
-        titleKey="seo.homeTitle"
-        descriptionKey="seo.homeDescription"
-        path="/"
-      />
       <Header />
-      <main>
-        <Hero />
-        <WhatWeOffer />
-        <Faq />
-        <Book />
-      </main>
+      <Routes>
+        <Route
+          index
+          element={
+            <>
+              <SEO
+                titleKey="seo.homeTitle"
+                descriptionKey="seo.homeDescription"
+                path={`/${lng}`}
+              />
+              <main>
+                <Hero />
+                <WhatWeOffer />
+                <Faq />
+                <Book />
+              </main>
+            </>
+          }
+        />
+        <Route
+          path="gallery"
+          element={
+            <>
+              <SEO
+                titleKey="seo.galleryTitle"
+                descriptionKey="seo.galleryDescription"
+                path={`/${lng}/gallery`}
+              />
+              <Gallery />
+            </>
+          }
+        />
+      </Routes>
       <Footer />
     </>
   );

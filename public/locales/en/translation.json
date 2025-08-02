@@ -44,6 +44,8 @@
   "seo": {
     "homeTitle": "Welcome to your volcano escape",
     "homeDescription": "Book your stay near Arenal Volcano, Costa Rica.",
-    "keywords": "Arenal, Costa Rica, Volcano, Villas, Hotel, Nature, Travel"
+    "keywords": "Arenal, Costa Rica, Volcano, Villas, Hotel, Nature, Travel",
+    "galleryTitle": "Take a look at your stay",
+    "galleryDescription": "Stunning photos of the villas and the surroundings."
   }
 }

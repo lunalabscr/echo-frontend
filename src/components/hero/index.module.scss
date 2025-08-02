@@ -9,6 +9,7 @@
 
   &__h1 {
     @include helpers.visually-hidden;
+    font-size: large;
   }
 
   &__text {
