@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import styles from "./index.module.scss";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 export const Header = () => {
   const { t } = useTranslation("translation", {
@@ -12,6 +12,7 @@ export const Header = () => {
   });
 
   const navigate = useNavigate();
+  const { lng } = useParams();
 
   const phone = import.meta.env.VITE_WHATSAPP_PHONE || "";
   const message = encodeURIComponent(info("wa-text"));
@@ -48,14 +49,11 @@ export const Header = () => {
             {t("about")}
           </a>
         </div>
-        <a href="#home">AVV</a>
+        <Link to="/">AVV</Link>
         <div className={styles["header__item-wrapper"]}>
-          <a
-            className={clsx(styles.header__item, styles["header__large-item"])}
-            onClick={() => navigate("gallery")}
-          >
+          <Link to={`/${lng}/gallery`} className={clsx(styles.header__item)}>
             {t("gallery")}
-          </a>
+          </Link>
           <a onClick={handleClick} className={styles.header__item} href="#book">
             {t("book-now")}
           </a>

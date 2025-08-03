@@ -1,78 +1,79 @@
 @use "@styles/mixins";
 @use "@styles/typography";
 @use "@styles/colors";
-@use "@styles/helpers";
 
-.hero {
+.gallery {
   @include mixins.container;
+  @include mixins.flex-center;
   scroll-margin-top: 80px;
-
-  &__h1 {
-    @include helpers.visually-hidden;
-    font-size: large;
-  }
-
-  &__text {
-    @include mixins.flex-center;
-    height: 100dvh;
-    flex-direction: column;
-  }
+  padding-top: 80px;
+  flex-direction: column;
 
   &__title {
-    font-family: "glacial-bold";
     @include typography.font-size(xl);
-    @include mixins.respond-to(2xs) {
-      @include typography.font-size(xl);
-    }
-
+    text-align: center;
+    font-weight: bold;
+    margin-top: 80px;
     @include mixins.respond-to(md) {
       @include typography.font-size(1xl);
     }
-    font-weight: bold;
   }
 
   &__subtitle {
-    font-family: "noracle";
     @include typography.font-size(xl);
     color: colors.$text-third;
     text-align: center;
     font-weight: bold;
-    @include mixins.respond-to(2xs) {
-      @include typography.font-size(xl);
-    }
+    margin-bottom: 50px;
     @include mixins.respond-to(md) {
       @include typography.font-size(1xl);
     }
   }
-  &__text2 {
+
+  &__text {
     @include typography.font-size(lg);
-    @include helpers.truncate(4);
-    text-align: left;
+    text-align: center;
     font-weight: bold;
+    color: colors.$text-primary;
     max-width: 600px;
     text-wrap: balance;
-
-    @include mixins.respond-to(lg) {
+    @include mixins.respond-to(md) {
       @include typography.font-size(xl);
     }
   }
 
   &__subtext {
     @include typography.font-size(lg);
-    @include helpers.truncate(5);
-    color: colors.$text-third;
+    text-align: center;
     font-weight: bold;
-    text-align: left;
+    color: colors.$text-secondary;
     max-width: 600px;
     text-wrap: balance;
-    @include mixins.respond-to(lg) {
+    @include mixins.respond-to(md) {
       @include typography.font-size(xl);
     }
   }
 
-  &__description {
-    display: flex;
-    flex-direction: column;
+  &__main-picture {
+    width: 100%;
+    height: auto;
     margin-block: 40px;
+    border-radius: 20px;
+  }
+
+  &__picture {
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__grid-gallery {
+    display: grid;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-block: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 }

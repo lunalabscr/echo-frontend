@@ -8,7 +8,8 @@ import { WhatWeOffer } from "@/components/whatweoffer";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams, Routes, Route } from "react-router-dom";
-import { Gallery } from "./Gallery";
+import { Gallery } from "./gallery/Gallery";
+import { ScrollToTop } from "@/components/scrollToTop";
 
 export const LocalizedApp = () => {
   const { lng } = useParams();
@@ -59,6 +60,7 @@ export const LocalizedApp = () => {
                 descriptionKey="seo.galleryDescription"
                 path={`/${lng}/gallery`}
               />
+              <ScrollToTop />
               <Gallery />
             </>
           }
