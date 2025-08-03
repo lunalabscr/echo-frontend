@@ -30,7 +30,7 @@
   &__text {
     @include mixins.container;
     @include mixins.flex-center;
-    height: 100dvh;
+    height: 100vh;
     position: relative;
     flex-direction: column;
     z-index: 2;
