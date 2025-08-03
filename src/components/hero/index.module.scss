@@ -27,6 +27,7 @@
 
   &__title {
     font-family: "glacial-bold";
+    text-align: center;
     @include typography.font-size(xl);
     @include mixins.respond-to(2xs) {
       @include typography.font-size(xl);
