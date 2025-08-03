@@ -43,6 +43,7 @@ export const LocalizedApp = () => {
                 path={`/${lng}`}
               />
               <main>
+                <ScrollToTop />
                 <Hero />
                 <WhatWeOffer />
                 <Faq />
