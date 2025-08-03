@@ -3,26 +3,29 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
+
   <!-- Home page -->
   <url>
     <loc>https://www.arenalvolcanicvillas.com/en/</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://www.arenalvolcanicvillas.com/en/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="es"
-      href="https://www.arenalvolcanicvillas.com/es/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="pt"
-      href="https://www.arenalvolcanicvillas.com/pt/"
-    />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arenalvolcanicvillas.com/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.arenalvolcanicvillas.com/es/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.arenalvolcanicvillas.com/pt/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.arenalvolcanicvillas.com/" />
     <lastmod>2025-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Gallery page -->
+  <url>
+    <loc>https://www.arenalvolcanicvillas.com/en/gallery</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arenalvolcanicvillas.com/en/gallery" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.arenalvolcanicvillas.com/es/gallery" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.arenalvolcanicvillas.com/pt/gallery" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.arenalvolcanicvillas.com/gallery" />
+    <lastmod>2025-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
