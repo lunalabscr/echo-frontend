@@ -45,15 +45,11 @@ export const WhatWeOffer = () => {
             })}
           >
             <img
-              srcSet={`${offer.mobileImage} 400w, ${offer.tabletImage} 768w, ${offer.desktopImage} 1200w`}
-              sizes="
-                (max-width: 768px) 100vw,
-                (max-width: 1199px) 100vw,
-                1200px
-              "
+              srcSet={`${offer.mobileImage} 500w, ${offer.tabletImage} 768w, ${offer.desktopImage} 1200w`}
+              sizes="(max-width: 767px) 50vw, (max-width: 1199px) 100vw, 1200px"
               alt={`${offer.title} image`}
               className={styles["offers__image"]}
-              src={offer.image}
+              src={offer.tabletImage}
             />
           </div>
           <div>
