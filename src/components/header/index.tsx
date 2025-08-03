@@ -33,10 +33,13 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.header__items}>
+        <Link className={styles["header__small-item"]} to="/">
+          AVV
+        </Link>
         <div className={styles["header__item-wrapper"]}>
           <a
             href="#home"
-            className={styles.header__item}
+            className={clsx(styles.header__item, styles["header__large-item"])}
             onClick={() => handleHomeClick("home")}
           >
             {t("home")}
@@ -49,8 +52,17 @@ export const Header = () => {
             {t("about")}
           </a>
         </div>
-        <Link to="/">AVV</Link>
+        <Link className={styles["header__large-item"]} to="/">
+          AVV
+        </Link>
         <div className={styles["header__item-wrapper"]}>
+          <a
+            href="#home"
+            className={clsx(styles.header__item, styles["header__small-item"])}
+            onClick={() => handleHomeClick("home")}
+          >
+            {t("home")}
+          </a>
           <Link to={`/${lng}/gallery`} className={clsx(styles.header__item)}>
             {t("gallery")}
           </Link>

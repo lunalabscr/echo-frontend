@@ -7,6 +7,7 @@ export const Hero = () => {
     <section className={styles.hero} id="home">
       <h1 className={styles.hero__h1}>Arenal Volcanic Villas</h1>
       <article className={styles.hero__text}>
+        <div className={styles["background-image"]}></div>
         <p className={styles.hero__title}>{t("stay-near")}</p>
         <p className={styles.hero__subtitle}>{t("escape-fortuna")}</p>
       </article>

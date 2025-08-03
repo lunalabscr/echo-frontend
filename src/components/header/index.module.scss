@@ -25,6 +25,12 @@
     color: colors.$text-third;
     font-weight: bold;
   }
+  &__small-item {
+    display: block;
+    @include mixins.respond-to(md) {
+      display: none;
+    }
+  }
 
   &__large-item {
     display: none;

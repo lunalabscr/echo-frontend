@@ -10,19 +10,19 @@ export const WhatWeOffer = () => {
       id: "offer-1",
       title: t("volcano-views"),
       subtitle: t("volcano-views-desc"),
-      image: "https://placehold.co/400x400",
+      image: "/images/IMG_3145.webp",
     },
     {
       id: "offer-2",
       title: t("modern-comfort"),
       subtitle: t("modern-comfort-desc"),
-      image: "https://placehold.co/400x400",
+      image: "/images/IMG_3161.webp",
     },
     {
       id: "offer-3",
       title: t("adv-door"),
       subtitle: t("adv-door-desc"),
-      image: "https://placehold.co/400x400",
+      image: "/images/IMG_3319.webp",
     },
   ];
 
@@ -31,7 +31,7 @@ export const WhatWeOffer = () => {
       {whatWeOffer.map((offer, index) => (
         <article key={offer.id} className={styles.offers__grid}>
           <div
-            className={clsx({
+            className={clsx(styles["offers__image-wrapper"], {
               [styles["offers__order"]]: index % 2 == 0,
             })}
           >
