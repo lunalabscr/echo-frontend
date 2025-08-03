@@ -11,18 +11,27 @@ export const WhatWeOffer = () => {
       title: t("volcano-views"),
       subtitle: t("volcano-views-desc"),
       image: "/images/IMG_3145.webp",
+      mobileImage: "/images/IMG_3145-400.webp", // Optional mobile-specific image
+      desktopImage: "/images/IMG_3145-1200.webp", // Optional desktop-specific image
+      tabletImage: "/images/IMG_3145-768.webp", // Optional tablet-specific image
     },
     {
       id: "offer-2",
       title: t("modern-comfort"),
       subtitle: t("modern-comfort-desc"),
       image: "/images/IMG_3161.webp",
+      mobileImage: "/images/IMG_3161-400.webp", // Optional mobile-specific image
+      desktopImage: "/images/IMG_3161-1200.webp", // Optional desktop-specific image
+      tabletImage: "/images/IMG_3161-768.webp", // Optional tablet-specific image
     },
     {
       id: "offer-3",
       title: t("adv-door"),
       subtitle: t("adv-door-desc"),
       image: "/images/IMG_3319.webp",
+      mobileImage: "/images/IMG_3319-400.webp", // Optional mobile-specific image
+      desktopImage: "/images/IMG_3319-1200.webp", // Optional desktop-specific image
+      tabletImage: "/images/IMG_3319-768.webp", // Optional tablet-specific image
     },
   ];
 
@@ -36,6 +45,12 @@ export const WhatWeOffer = () => {
             })}
           >
             <img
+              srcSet={`${offer.mobileImage} 400w, ${offer.tabletImage} 768w, ${offer.desktopImage} 1200w`}
+              sizes="
+                (max-width: 768px) 100vw,
+                (max-width: 1199px) 100vw,
+                1200px
+              "
               alt={`${offer.title} image`}
               className={styles["offers__image"]}
               src={offer.image}

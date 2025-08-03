@@ -1,7 +1,8 @@
 import clsx from "clsx";
 import styles from "./index.module.scss";
-import useFancybox from "@/hooks/useFancyBox";
 import { useTranslation } from "react-i18next";
+import useFancybox from "@/hooks/useFancybox";
+
 export const Gallery = () => {
   const { t } = useTranslation("translation", { keyPrefix: "gallery" });
   const [ref] = useFancybox();
