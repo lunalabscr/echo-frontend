@@ -30,7 +30,8 @@
       "@styles/*": ["src/styles/*"],
       "@components/*": ["src/components/*"],
       "@constants/*": ["src/constants/*"],
-      "@types/*": ["src/types/*"]
+      "@types/*": ["src/types/*"],
+      "@hooks/*": ["src/hooks/*"]
     }
   },
   "include": ["src"]
