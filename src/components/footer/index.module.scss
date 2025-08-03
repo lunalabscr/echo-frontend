@@ -3,14 +3,41 @@
 @use "@styles/colors";
 
 .footer {
-  @include mixins.container;
-  margin-block: 50px;
+  background-color: colors.$dark-green;
+  margin-top: 50px;
+
+  &__wrapper {
+    @include mixins.container;
+    padding-block: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__content {
+    display: flex;
+    gap: 20px;
+  }
 
   &__text {
+    color: colors.$vanilla;
     font-weight: 700;
   }
 
   &__subtext {
-    color: colors.$text-third;
+    color: colors.$background;
+  }
+
+  &__logo-wrapper {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    color: colors.$vanilla;
+  }
+  &__logo {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
   }
 }

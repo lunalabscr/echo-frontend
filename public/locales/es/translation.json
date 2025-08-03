@@ -28,7 +28,11 @@
     "connect": "Conectar",
     "instagram": "Instagram",
     "whatsapp": "Whatsapp",
-    "experience": "Experiencia"
+    "facebook": "Facebook",
+    "experience": "Experiencia",
+    "policy": "Política",
+    "return-policy": "Política de Devolución",
+    "terms-conditions": "Términos y Condiciones"
   },
   "faq": {
     "question1": "¿Qué tan cerca están del Volcán Arenal?",
