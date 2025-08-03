@@ -1,6 +1,7 @@
 @use "@styles/mixins";
 @use "@styles/typography";
 @use "@styles/colors";
+@use "@styles/helpers";
 
 .gallery {
   @include mixins.container;
@@ -8,6 +9,10 @@
   scroll-margin-top: 80px;
   padding-top: 80px;
   flex-direction: column;
+
+  &__h1 {
+    @include helpers.visually-hidden;
+  }
 
   &__title {
     @include typography.font-size(xl);

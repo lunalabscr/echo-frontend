@@ -60,8 +60,10 @@ export const LocalizedApp = () => {
                 descriptionKey="seo.galleryDescription"
                 path={`/${lng}/gallery`}
               />
-              <ScrollToTop />
-              <Gallery />
+              <main>
+                <ScrollToTop />
+                <Gallery />
+              </main>
             </>
           }
         />

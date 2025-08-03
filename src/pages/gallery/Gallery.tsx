@@ -1,8 +1,31 @@
 import clsx from "clsx";
 import styles from "./index.module.scss";
 export const Gallery = () => {
+  const galleryList = [
+    {
+      src: "/images/IMG_3185.webp",
+      alt: "Villa main bedroom",
+      className: styles["gallery__picture"],
+    },
+    {
+      src: "/images/IMG_3172.webp",
+      alt: "Villa kitchen",
+      className: styles["gallery__picture"],
+    },
+    {
+      src: "/images/IMG_3161.webp",
+      alt: "Villa living room",
+      className: styles["gallery__picture"],
+    },
+    {
+      src: "/images/IMG_3336.webp",
+      alt: "Villa outside view",
+      className: styles["gallery__picture"],
+    },
+  ];
   return (
-    <div className={styles.gallery}>
+    <section className={styles.gallery}>
+      <h1 className={styles.gallery__h1}>Arenal Volcanic Villas</h1>
       <p className={styles.gallery__title}>Stunning Villa Views.</p>
       <p className={styles.gallery__subtitle}>Browse amenities & landscapes.</p>
       <div className={styles["gallery__main-picture-wrapper"]}>
@@ -14,31 +37,15 @@ export const Gallery = () => {
       </div>
 
       <div className={styles["gallery__grid-gallery"]}>
-        <div className={styles["gallery__picture-wrapper"]}>
-          <img
-            src="/images/IMG_3185.webp"
-            className={clsx(styles["gallery__picture"])}
-          />
-        </div>
-        <div className={styles["gallery__picture-wrapper"]}>
-          <img
-            src="/images/IMG_3172.webp"
-            className={clsx(styles["gallery__picture"])}
-          />
-        </div>
-        <div className={styles["gallery__picture-wrapper"]}>
-          <img
-            src="/images/IMG_3161.webp"
-            className={clsx(styles["gallery__picture"])}
-          />
-        </div>
-
-        <div className={styles["gallery__picture-wrapper"]}>
-          <img
-            src="/images/IMG_3336.webp"
-            className={clsx(styles["gallery__picture"])}
-          />
-        </div>
+        {galleryList.map((item, index) => (
+          <div key={index} className={styles["gallery__picture-wrapper"]}>
+            <img
+              src={item.src}
+              alt={item.alt}
+              className={clsx(item.className)}
+            />
+          </div>
+        ))}
       </div>
 
       <p className={styles.gallery__text}>
@@ -48,6 +55,6 @@ export const Gallery = () => {
         From sparkling pools to terrace sunsets, let each image inspire your
         next stay.
       </p>
-    </div>
+    </section>
   );
 };
