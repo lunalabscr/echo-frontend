@@ -3,16 +3,24 @@
 @use "@styles/colors";
 @use "@styles/helpers";
 
-.background-image {
-  background-image: url("/images/IMG_3145.webp");
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); // or use a gradient
+  z-index: 1;
+}
+
+.hero {
+  position: relative;
+  scroll-margin-top: 80px;
+
+  background-image: url("/images/arenal-volcano.jpg");
+
   background-size: cover;
   background-position: center;
-  filter: blur(1px);
-  width: 100%;
-}
-.hero {
-  @include mixins.container;
-  scroll-margin-top: 80px;
 
   &__h1 {
     @include helpers.visually-hidden;
@@ -20,14 +28,19 @@
   }
 
   &__text {
+    @include mixins.container;
     @include mixins.flex-center;
     height: 100dvh;
+    position: relative;
     flex-direction: column;
+    z-index: 2;
   }
 
   &__title {
     font-family: "glacial-bold";
     text-align: center;
+    z-index: 1;
+    color: colors.$vanilla;
     @include typography.font-size(xl);
     @include mixins.respond-to(2xs) {
       @include typography.font-size(xl);
@@ -41,8 +54,10 @@
 
   &__subtitle {
     font-family: "noracle";
+    color: colors.$vanilla;
     @include typography.font-size(xl);
-    color: colors.$text-third;
+    z-index: 1;
+    // color: colors.$text-third;
     text-align: center;
     font-weight: bold;
     @include mixins.respond-to(2xs) {
@@ -79,6 +94,7 @@
   }
 
   &__description {
+    @include mixins.container;
     display: flex;
     flex-direction: column;
     margin-block: 40px;

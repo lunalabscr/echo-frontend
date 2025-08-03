@@ -1,33 +1,44 @@
+import clsx from "clsx";
 import styles from "./index.module.scss";
 export const Gallery = () => {
   return (
     <div className={styles.gallery}>
       <p className={styles.gallery__title}>Stunning Villa Views.</p>
       <p className={styles.gallery__subtitle}>Browse amenities & landscapes.</p>
-
-      <img
-        className={styles["gallery__main-picture"]}
-        src="https://placehold.co/600x400"
-        alt=""
-      />
+      <div className={styles["gallery__main-picture-wrapper"]}>
+        <img
+          className={styles["gallery__main-picture"]}
+          src="https://placehold.co/600x400"
+          alt=""
+        />
+      </div>
 
       <div className={styles["gallery__grid-gallery"]}>
-        <img
-          src="https://placehold.co/200x200"
-          className={styles.gallery__picture}
-        />
-        <img
-          src="https://placehold.co/200x200"
-          className={styles.gallery__picture}
-        />
-        <img
-          src="https://placehold.co/200x200"
-          className={styles.gallery__picture}
-        />
-        <img
-          src="https://placehold.co/200x200"
-          className={styles.gallery__picture}
-        />
+        <div className={styles["gallery__picture-wrapper"]}>
+          <img
+            src="/images/IMG_3185.webp"
+            className={clsx(styles["gallery__picture"])}
+          />
+        </div>
+        <div className={styles["gallery__picture-wrapper"]}>
+          <img
+            src="/images/IMG_3172.webp"
+            className={clsx(styles["gallery__picture"])}
+          />
+        </div>
+        <div className={styles["gallery__picture-wrapper"]}>
+          <img
+            src="/images/IMG_3161.webp"
+            className={clsx(styles["gallery__picture"])}
+          />
+        </div>
+
+        <div className={styles["gallery__picture-wrapper"]}>
+          <img
+            src="/images/IMG_3336.webp"
+            className={clsx(styles["gallery__picture"])}
+          />
+        </div>
       </div>
 
       <p className={styles.gallery__text}>
