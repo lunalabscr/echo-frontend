@@ -45,5 +45,12 @@
     "homeTitle": "Bienvenido a tu escape al volcán",
     "homeDescription": "Reserva tu estadía cerca del Volcán Arenal, Costa Rica.",
     "keywords": "Arenal, Costa Rica, Volcán, Villas, Hotel, Naturaleza, Viaje"
+  },
+  "gallery": {
+    "click-tosee": "Haz clic para ver más imágenes",
+    "text": "Descubre cada detalle de nuestra villa y sus impresionantes alrededores.",
+    "subtext": "Desde piscinas brillantes hasta atardeceres en la terraza, deja que cada imagen inspire tu próxima estadía.",
+    "title": "Vistas impresionantes de la villa.",
+    "subtitle": "Explora comodidades y paisajes."
   }
 }

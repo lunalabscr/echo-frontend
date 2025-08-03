@@ -45,5 +45,12 @@
     "homeTitle": "Bem-vindo ao seu refúgio perto do vulcão",
     "homeDescription": "Reserve sua estadia perto do Vulcão Arenal, Costa Rica.",
     "keywords": "Arenal, Costa Rica, Vulcão, Villas, Hotel, Natureza, Viagem"
+  },
+  "gallery": {
+    "click-tosee": "Clique para ver mais imagens",
+    "text": "Veja todos os detalhes da nossa vila e seus arredores deslumbrantes.",
+    "subtext": "De piscinas cintilantes a pores do sol no terraço, deixe cada imagem inspirar sua próxima estadia.",
+    "title": "Vistas deslumbrantes da vila.",
+    "subtitle": "Explore comodidades e paisagens."
   }
 }

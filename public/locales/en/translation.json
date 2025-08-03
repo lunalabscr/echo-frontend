@@ -47,5 +47,12 @@
     "keywords": "Arenal, Costa Rica, Volcano, Villas, Hotel, Nature, Travel",
     "galleryTitle": "Take a look at your stay",
     "galleryDescription": "Stunning photos of the villas and the surroundings."
+  },
+  "gallery": {
+    "click-tosee": "Click to see more images",
+    "text": "See every detail of our villa and its breathtaking surroundings.",
+    "subtext": "From sparkling pools to terrace sunsets, let each image inspire your next stay.",
+    "title": "Stunning Villa Views.",
+    "subtitle": "Browse amenities & landscapes."
   }
 }

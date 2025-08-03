@@ -5,7 +5,7 @@ export const Footer = () => {
   const { t } = useTranslation("translation", { keyPrefix: "footer" });
   return (
     <footer className={styles.footer}>
-      <img alt="Arenal Volcanic Villas logo" />
+      {/* <img alt="Arenal Volcanic Villas logo" /> */}
       <div>
         <p className={styles.footer__text}>{t("connect")}</p>
         <p className={styles.footer__subtext}>{t("instagram")}</p>
