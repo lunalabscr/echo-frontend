@@ -12,10 +12,12 @@
   @include mixins.respond-to(lg) {
     justify-content: center;
     height: 600px;
+    max-width: 600px;
   }
 
   &__item {
-    border-radius: 4px;
+    border-radius: 8px;
+    width: 100%;
     background-color: colors.$gray;
   }
 

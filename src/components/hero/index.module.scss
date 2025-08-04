@@ -37,7 +37,7 @@
   }
 
   &__title {
-    font-family: "glacial-bold";
+    font-family: "glacial-bold", Arial;
     text-align: center;
     z-index: 1;
     color: colors.$vanilla;
@@ -53,7 +53,7 @@
   }
 
   &__subtitle {
-    font-family: "noracle";
+    font-family: "noracle", Arial;
     color: colors.$vanilla;
     @include typography.font-size(xl);
     z-index: 1;
