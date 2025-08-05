@@ -22,7 +22,10 @@ export const Header = () => {
   };
 
   const handleHomeClick = (section: string) => {
-    if (location.pathname.includes("/gallery")) {
+    if (
+      location.pathname.includes("/gallery") ||
+      location.pathname.includes("/terms-and-conditions")
+    ) {
       navigate("/");
     } else {
       const el = document.getElementById(section);
