@@ -1,8 +1,7 @@
 import clsx from "clsx";
 import styles from "./index.module.scss";
 import { useTranslation } from "react-i18next";
-import { Link, useParams } from "react-router-dom";
-import { useSmoothNavigation } from "@/hooks/useSmoothNavigation";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 export const Header = () => {
   const { t } = useTranslation("translation", {
@@ -12,15 +11,23 @@ export const Header = () => {
     keyPrefix: "info",
   });
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const { lng } = useParams();
-  const navigateTo = useSmoothNavigation();
 
   const phone = import.meta.env.VITE_WHATSAPP_PHONE || "";
   const message = encodeURIComponent(info("wa-text"));
 
   const handleClick = () => {
     window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+  };
+
+  const handleHomeClick = (section: string) => {
+    if (location.pathname.includes("/gallery")) {
+      navigate("/");
+    } else {
+      const el = document.getElementById(section);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -31,15 +38,16 @@ export const Header = () => {
         </Link>
         <div className={styles["header__item-wrapper"]}>
           <a
+            href="#home"
             className={clsx(styles.header__item, styles["header__large-item"])}
-            onClick={() => navigateTo("/")}
+            onClick={() => handleHomeClick("home")}
           >
             {t("home")}
           </a>
           <a
             href="#about"
             className={clsx(styles.header__item, styles["header__large-item"])}
-            onClick={() => navigateTo("#about")}
+            onClick={() => handleHomeClick("about")}
           >
             {t("about")}
           </a>
@@ -49,8 +57,9 @@ export const Header = () => {
         </Link>
         <div className={styles["header__item-wrapper"]}>
           <a
+            href="#home"
             className={clsx(styles.header__item, styles["header__small-item"])}
-            onClick={() => navigateTo("/")}
+            onClick={() => handleHomeClick("home")}
           >
             {t("home")}
           </a>
