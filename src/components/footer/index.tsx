@@ -1,11 +1,13 @@
 import { useTranslation } from "react-i18next";
 import styles from "./index.module.scss";
+import { Link, useParams } from "react-router-dom";
 
 export const Footer = () => {
   const { t } = useTranslation("translation", { keyPrefix: "footer" });
   const { t: info } = useTranslation("translation", {
     keyPrefix: "info",
   });
+  const { lng } = useParams();
   const phone = import.meta.env.VITE_WHATSAPP_PHONE || "";
   const message = encodeURIComponent(info("wa-text"));
 
@@ -33,8 +35,19 @@ export const Footer = () => {
 
           <div>
             <p className={styles.footer__text}>{t("policy")}</p>
-            <p className={styles.footer__subtext}>{t("return-policy")}</p>
-            <p className={styles.footer__subtext}>{t("terms-conditions")}</p>
+            <Link
+              to={`/${lng}/return-policy`}
+              className={styles.footer__subtext}
+            >
+              {t("return-policy")}
+            </Link>
+            <br />
+            <Link
+              to={`/${lng}/terms-and-conditions`}
+              className={styles.footer__subtext}
+            >
+              {t("terms-conditions")}
+            </Link>
           </div>
         </div>
       </div>

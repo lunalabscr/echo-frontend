@@ -10,6 +10,9 @@ import { useTranslation } from "react-i18next";
 import { useNavigate, useParams, Routes, Route } from "react-router-dom";
 import { Gallery } from "./gallery/Gallery";
 import { ScrollToTop } from "@/components/scrollToTop";
+import { TermsAndConditions } from "./terms-and-conditions";
+import { NotFound } from "./not-found";
+import "@styles/globals.scss";
 
 export const LocalizedApp = () => {
   const { lng } = useParams();
@@ -30,7 +33,7 @@ export const LocalizedApp = () => {
   }, [lng, i18n, navigate]);
 
   return (
-    <>
+    <div className="layout">
       <Header />
       <Routes>
         <Route
@@ -68,8 +71,25 @@ export const LocalizedApp = () => {
             </>
           }
         />
+        <Route
+          path="terms-and-conditions"
+          element={
+            <>
+              <SEO
+                titleKey=""
+                descriptionKey=""
+                path={`/${lng}/terms-and-conditions`}
+              />
+              <main>
+                <ScrollToTop />
+                <TermsAndConditions />
+              </main>
+            </>
+          }
+        />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 };
