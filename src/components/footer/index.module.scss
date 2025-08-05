@@ -17,7 +17,11 @@
 
   &__content {
     display: flex;
+    flex-direction: column;
     gap: 20px;
+    @include mixins.respond-to(md) {
+      flex-direction: row;
+    }
   }
 
   &__text {
