@@ -19,16 +19,16 @@ export const WhatWeOffer = () => {
       id: "offer-2",
       title: t("modern-comfort"),
       subtitle: t("modern-comfort-desc"),
-      image: "/images/IMG_3161.webp",
-      mobileImage: "/images/IMG_3161-400.webp", // Optional mobile-specific image
-      desktopImage: "/images/IMG_3161-1200.webp", // Optional desktop-specific image
-      tabletImage: "/images/IMG_3161-768.webp", // Optional tablet-specific image
+      image: "/images/moderncomfort-768.webp",
+      mobileImage: "/images/moderncomfort-400.webp", // Optional mobile-specific image
+      desktopImage: "/images/moderncomfort-1200.webp", // Optional desktop-specific image
+      tabletImage: "/images/moderncomfort-768.webp", // Optional tablet-specific image
     },
     {
       id: "offer-3",
       title: t("adv-door"),
       subtitle: t("adv-door-desc"),
-      image: "/images/IMG_3319.webp",
+      image: "/images/IMG_3319-768.webp",
       mobileImage: "/images/IMG_3319-400.webp", // Optional mobile-specific image
       desktopImage: "/images/IMG_3319-1200.webp", // Optional desktop-specific image
       tabletImage: "/images/IMG_3319-768.webp", // Optional tablet-specific image

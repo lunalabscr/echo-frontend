@@ -9,63 +9,103 @@ export const Gallery = () => {
   const [ref] = useFancybox();
   const galleryList: Image[] = [
     {
-      src: "/images/IMG_3185.webp",
+      src: "/images/mainbedroom-768.webp",
       alt: "Villa main bedroom",
       className: styles["gallery__picture"],
-      mobileSrc: "/images/IMG_3185-400.webp", // Optional mobile image
-      desktopSrc: "/images/IMG_3185-1200.webp", // Optional desktop image
-      tabletSrc: "/images/IMG_3185-768.webp", // Optional tablet image
+      mobileSrc: "/images/mainbedroom-400.webp", // Optional mobile image
+      desktopSrc: "/images/mainbedroom-1200.webp", // Optional desktop image
+      tabletSrc: "/images/mainbedroom-768.webp", // Optional tablet image
     },
     {
-      src: "/images/IMG_3172.webp",
+      src: "/images/kitchen-768.webp",
       alt: "Villa kitchen",
       className: styles["gallery__picture"],
-      mobileSrc: "/images/IMG_3172-400.webp", // Optional mobile image
-      desktopSrc: "/images/IMG_3172-1200.webp", // Optional desktop image
-      tabletSrc: "/images/IMG_3172-768.webp", // Optional tablet image
+      mobileSrc: "/images/kitchen-400.webp", // Optional mobile image
+      desktopSrc: "/images/kitchen-1200.webp", // Optional desktop image
+      tabletSrc: "/images/kitchen-768.webp", // Optional tablet image
     },
     {
-      src: "/images/IMG_3161.webp",
+      src: "/images/livingroom-768.webp",
       alt: "Villa living room",
       className: styles["gallery__picture"],
-      mobileSrc: "/images/IMG_3161-400.webp", // Optional mobile image
-      desktopSrc: "/images/IMG_3161-1200.webp", // Optional desktop image
-      tabletSrc: "/images/IMG_3161-768.webp", // Optional tablet image
+      mobileSrc: "/images/livingroom-400.webp", // Optional mobile image
+      desktopSrc: "/images/livingroom-1200.webp", // Optional desktop image
+      tabletSrc: "/images/livingroom-768.webp", // Optional tablet image
     },
     {
-      src: "/images/IMG_3336.webp",
+      src: "/images/outside-768.webp",
       alt: "Villa outside view",
       className: styles["gallery__picture"],
-      mobileSrc: "/images/IMG_3336-400.webp", // Optional mobile image
-      desktopSrc: "/images/IMG_3336-1200.webp", // Optional desktop image
-      tabletSrc: "/images/IMG_3336-768.webp", // Optional tablet image
+      mobileSrc: "/images/outside-400.webp", // Optional mobile image
+      desktopSrc: "/images/outside-1200.webp", // Optional desktop image
+      tabletSrc: "/images/outside-768.webp", // Optional tablet image
     },
   ];
 
   const galleryNotDisplayed: Image[] = [
     {
-      src: "/images/IMG_3145.webp",
-      alt: "Volcano views from the villa",
-    },
-    {
-      src: "/images/IMG_3171.webp",
+      src: "/images/livingroom2-1200.webp",
       alt: "Villa living room",
     },
     {
-      src: "/images/IMG_3181.webp",
+      src: "/images/mainbedroom-1200.webp",
       alt: "Villa main bedroom",
     },
     {
-      src: "/images/IMG_3319.webp",
+      src: "/images/porch-1200.webp",
       alt: "Villa outside view to the porch",
     },
     {
-      src: "/images/IMG_3340.webp",
+      src: "/images/outside2-1200.webp",
       alt: "Villa entrance",
     },
     {
-      src: "/images/IMG_3346.webp",
+      src: "/images/bathroom-1200.webp",
       alt: "Villa bathroom",
+    },
+    {
+      src: "/images/entrance-1200.webp",
+      alt: "Villa entrance",
+    },
+    {
+      src: "/images/drone-1200.webp",
+      alt: "Villa above view",
+    },
+    {
+      src: "/images/sidebedroom-1200.webp",
+      alt: "Villa main bedroom side view",
+    },
+    {
+      src: "/images/bathroom2-1200.webp",
+      alt: "Villa bathroom",
+    },
+    {
+      src: "/images/bedroom-1200.webp",
+      alt: "Villa main bedroom",
+    },
+    {
+      src: "/images/bedroom3-1200.webp",
+      alt: "Villa main bedroom",
+    },
+    {
+      src: "/images/bedroom4-1200.webp",
+      alt: "Villa main bedroom",
+    },
+    {
+      src: "/images/bedroom5-1200.webp",
+      alt: "Villa main bedroom",
+    },
+    {
+      src: "/images/livingroom2-1200.webp",
+      alt: "Villa living room",
+    },
+    {
+      src: "/images/hall-1200.webp",
+      alt: "Villa hall",
+    },
+    {
+      src: "/images/kitchen-1200.webp",
+      alt: "Villa kitchen",
     },
   ];
   return (
@@ -76,7 +116,9 @@ export const Gallery = () => {
       <div className={styles["gallery__main-picture-wrapper"]}>
         <img
           className={styles["gallery__main-picture"]}
-          src="https://placehold.co/600x400"
+          src="/images/drone-768.webp"
+          srcSet={`/images/drone-400.webp 500w, /images/drone-768.webp 768w, /images/drone-1200.webp 1200w`}
+          sizes="(max-width: 767px) 50vw, (max-width: 1199px) 100vw, 1200px"
           alt=""
         />
       </div>
