@@ -4,28 +4,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
 
-  <!-- Home page -->
   <url>
-    <loc>https://www.arenalvolcanicvillas.com/en/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.arenalvolcanicvillas.com/en/" />
+    <loc>https://www.arenalvolcanicvillas.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arenalvolcanicvillas.com/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://www.arenalvolcanicvillas.com/es/" />
     <xhtml:link rel="alternate" hreflang="pt" href="https://www.arenalvolcanicvillas.com/pt/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.arenalvolcanicvillas.com/" />
-    <lastmod>2025-08-02</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Gallery page -->
   <url>
-    <loc>https://www.arenalvolcanicvillas.com/en/gallery</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.arenalvolcanicvillas.com/en/gallery" />
+    <loc>https://www.arenalvolcanicvillas.com/gallery</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arenalvolcanicvillas.com/gallery" />
     <xhtml:link rel="alternate" hreflang="es" href="https://www.arenalvolcanicvillas.com/es/gallery" />
     <xhtml:link rel="alternate" hreflang="pt" href="https://www.arenalvolcanicvillas.com/pt/gallery" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.arenalvolcanicvillas.com/gallery" />
-    <lastmod>2025-08-02</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.arenalvolcanicvillas.com/terms-and-conditions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arenalvolcanicvillas.com/terms-and-conditions" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.arenalvolcanicvillas.com/es/terms-and-conditions" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.arenalvolcanicvillas.com/pt/terms-and-conditions" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.arenalvolcanicvillas.com/terms-and-conditions" />
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.arenalvolcanicvillas.com/return-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arenalvolcanicvillas.com/return-policy" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.arenalvolcanicvillas.com/es/return-policy" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.arenalvolcanicvillas.com/pt/return-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.arenalvolcanicvillas.com/return-policy" />
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>
