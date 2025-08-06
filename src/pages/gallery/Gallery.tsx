@@ -96,10 +96,6 @@ export const Gallery = () => {
       alt: "Villa main bedroom",
     },
     {
-      src: "/images/livingroom2-1200.webp",
-      alt: "Villa living room",
-    },
-    {
       src: "/images/hall-1200.webp",
       alt: "Villa hall",
     },
