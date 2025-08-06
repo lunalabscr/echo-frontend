@@ -3,8 +3,11 @@ import styles from "./index.module.scss";
 import { useTranslation } from "react-i18next";
 import useFancybox from "@/hooks/useFancybox";
 import type { Image } from "@/types/Image";
+import SEO from "@/components/SEO";
+import { useParams } from "react-router-dom";
 
 export const Gallery = () => {
+  const { lang } = useParams();
   const { t } = useTranslation("translation", { keyPrefix: "gallery" });
   const [ref] = useFancybox();
   const galleryList: Image[] = [
@@ -105,53 +108,60 @@ export const Gallery = () => {
     },
   ];
   return (
-    <section className={styles.gallery}>
-      <h1 className={styles.gallery__h1}>Arenal Volcanic Villas</h1>
-      <p className={styles.gallery__title}>{t("title")}</p>
-      <p className={styles.gallery__subtitle}>{t("subtitle")}</p>
-      <div className={styles["gallery__main-picture-wrapper"]}>
-        <img
-          className={styles["gallery__main-picture"]}
-          src="/images/drone-768.webp"
-          srcSet={`/images/drone-400.webp 500w, /images/drone-768.webp 768w, /images/drone-1200.webp 1200w`}
-          sizes="(max-width: 767px) 50vw, (max-width: 1199px) 100vw, 1200px"
-          alt=""
-        />
-      </div>
-      <p className={styles.gallery__subtext}>{t("click-tosee")}</p>
-      <div ref={ref} className={styles["gallery__grid-gallery"]}>
-        {galleryList.map((item, index) => (
-          <a
-            data-fancybox="gallery"
-            key={index}
-            href={item.src}
-            className={styles["gallery__picture-wrapper"]}
-          >
-            <img
-              srcSet={`${item.mobileSrc} 500w, ${item.tabletSrc} 768w, ${item.desktopSrc} 1200w`}
-              sizes="(max-width: 767px) 50vw, (max-width: 1199px) 100vw, 1200px"
-              src={item.tabletSrc}
-              alt={item.alt}
-              className={clsx(item.className)}
-            />
-          </a>
-        ))}
-        <div style={{ display: "none" }}>
-          {galleryNotDisplayed.map((item) => (
-            <a key={item.src} data-fancybox="gallery" href={item.src}>
+    <>
+      <SEO
+        titleKey="seo.galleryTitle"
+        descriptionKey="seo.galleryDescription"
+        path={`/${lang}/gallery`}
+      />
+      <section className={styles.gallery}>
+        <h1 className={styles.gallery__h1}>Arenal Volcanic Villas</h1>
+        <p className={styles.gallery__title}>{t("title")}</p>
+        <p className={styles.gallery__subtitle}>{t("subtitle")}</p>
+        <div className={styles["gallery__main-picture-wrapper"]}>
+          <img
+            className={styles["gallery__main-picture"]}
+            src="/images/drone-768.webp"
+            srcSet={`/images/drone-400.webp 500w, /images/drone-768.webp 768w, /images/drone-1200.webp 1200w`}
+            sizes="(max-width: 767px) 50vw, (max-width: 1199px) 100vw, 1200px"
+            alt=""
+          />
+        </div>
+        <p className={styles.gallery__subtext}>{t("click-tosee")}</p>
+        <div ref={ref} className={styles["gallery__grid-gallery"]}>
+          {galleryList.map((item, index) => (
+            <a
+              data-fancybox="gallery"
+              key={index}
+              href={item.src}
+              className={styles["gallery__picture-wrapper"]}
+            >
               <img
-                src={item.src}
+                srcSet={`${item.mobileSrc} 500w, ${item.tabletSrc} 768w, ${item.desktopSrc} 1200w`}
+                sizes="(max-width: 767px) 50vw, (max-width: 1199px) 100vw, 1200px"
+                src={item.tabletSrc}
                 alt={item.alt}
-                // srcSet={`${item.mobileSrc} 500w, ${item.tabletSrc} 768w, ${item.desktopSrc} 1200w`}
-                // sizes="(max-width: 767px) 50vw, (max-width: 1199px) 100vw, 1200px"
+                className={clsx(item.className)}
               />
             </a>
           ))}
+          <div style={{ display: "none" }}>
+            {galleryNotDisplayed.map((item) => (
+              <a key={item.src} data-fancybox="gallery" href={item.src}>
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  // srcSet={`${item.mobileSrc} 500w, ${item.tabletSrc} 768w, ${item.desktopSrc} 1200w`}
+                  // sizes="(max-width: 767px) 50vw, (max-width: 1199px) 100vw, 1200px"
+                />
+              </a>
+            ))}
+          </div>
         </div>
-      </div>
 
-      <p className={styles.gallery__text}>{t("text")}</p>
-      <p className={styles.gallery__subtext}>{t("subtext")}</p>
-    </section>
+        <p className={styles.gallery__text}>{t("text")}</p>
+        <p className={styles.gallery__subtext}>{t("subtext")}</p>
+      </section>
+    </>
   );
 };

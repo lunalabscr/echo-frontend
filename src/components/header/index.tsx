@@ -12,7 +12,7 @@ export const Header = () => {
   });
 
   const navigate = useNavigate();
-  const { lng } = useParams();
+  const { lang } = useParams();
 
   const phone = import.meta.env.VITE_WHATSAPP_PHONE || "";
   const message = encodeURIComponent(info("wa-text"));
@@ -66,7 +66,7 @@ export const Header = () => {
           >
             {t("home")}
           </a>
-          <Link to={`/${lng}/gallery`} className={clsx(styles.header__item)}>
+          <Link to={`/${lang}/gallery`} className={clsx(styles.header__item)}>
             {t("gallery")}
           </Link>
           <a onClick={handleClick} className={styles.header__item} href="#book">
