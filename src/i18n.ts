@@ -12,7 +12,7 @@ i18n
     fallbackLng: "en",
     debug: true,
     supportedLngs: ["es", "en", "pt"],
-    // lng: "es",
+    lng: "en",
     interpolation: {
       escapeValue: false,
     },

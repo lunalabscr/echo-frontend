@@ -8,6 +8,7 @@ export const Footer = () => {
     keyPrefix: "info",
   });
   const { lang } = useParams();
+  const baseRoute = lang ? `/${lang}` : "";
   const phone = import.meta.env.VITE_WHATSAPP_PHONE || "";
   const message = encodeURIComponent(info("wa-text"));
 
@@ -36,14 +37,14 @@ export const Footer = () => {
           <div>
             <p className={styles.footer__text}>{t("policy")}</p>
             <Link
-              to={`/${lang}/return-policy`}
+              to={`${baseRoute}/return-policy`}
               className={styles.footer__subtext}
             >
               {t("return-policy")}
             </Link>
             <br />
             <Link
-              to={`/${lang}/terms-and-conditions`}
+              to={`${baseRoute}/terms-and-conditions`}
               className={styles.footer__subtext}
             >
               {t("terms-conditions")}
