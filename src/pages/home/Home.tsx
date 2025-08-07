@@ -7,12 +7,14 @@ import SEO from "@/components/SEO";
 
 export const Home = () => {
   const { lang } = useParams();
+  const baseRoute = lang ? `/${lang}` : "";
+
   return (
     <>
       <SEO
         titleKey="seo.homeTitle"
         descriptionKey="seo.homeDescription"
-        path={`/${lang}`}
+        path={`${baseRoute}`}
       />
 
       <Hero />

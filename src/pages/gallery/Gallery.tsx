@@ -10,6 +10,8 @@ export const Gallery = () => {
   const { lang } = useParams();
   const { t } = useTranslation("translation", { keyPrefix: "gallery" });
   const [ref] = useFancybox();
+  const baseRoute = lang ? `/${lang}` : "";
+
   const galleryList: Image[] = [
     {
       src: "/images/mainbedroom-768.webp",
@@ -112,7 +114,7 @@ export const Gallery = () => {
       <SEO
         titleKey="seo.galleryTitle"
         descriptionKey="seo.galleryDescription"
-        path={`/${lang}/gallery`}
+        path={`${baseRoute}/gallery`}
       />
       <section className={styles.gallery}>
         <h1 className={styles.gallery__h1}>Arenal Volcanic Villas</h1>

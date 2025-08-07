@@ -45,11 +45,15 @@
   "info": {
     "wa-text": "¡Hola! Me encantaría reservar una estadía en La Fortuna. ¿Podrías compartirme la disponibilidad y los detalles? "
   },
+
   "seo": {
-    "homeTitle": "Bienvenido a tu escape al volcán",
-    "homeDescription": "Reserva tu estadía cerca del Volcán Arenal, Costa Rica.",
-    "keywords": "Arenal, Costa Rica, Volcán, Villas, Hotel, Naturaleza, Viaje"
+    "homeTitle": "Arenal Volcanic Villas | Villas de Lujo cerca de La Fortuna, Costa Rica",
+    "homeDescription": "Experimente el escape perfecto en una villa privada con vistas espectaculares del Volcán Arenal. Nuestro hotel de lujo es la base ideal para su aventura en La Fortuna. ¡Reserve su estadía hoy!",
+    "keywords": "villas Arenal Costa Rica, hotel cerca Volcán Arenal, villas de lujo La Fortuna, alojamiento deluxe Costa Rica, retiro de naturaleza Arenal, villas privadas con vista al volcán, Arenal Volcanic Villas",
+    "galleryTitle": "Galería de Arenal Volcanic Villas | Fotos Impresionantes de nuestras Villas",
+    "galleryDescription": "Explore nuestra galería para ver imágenes impresionantes de nuestras villas de lujo, el Volcán Arenal, exuberantes jardines y la piscina."
   },
+
   "gallery": {
     "click-tosee": "Haz clic para ver más imágenes",
     "text": "Descubre cada detalle de nuestra villa y sus impresionantes alrededores.",
