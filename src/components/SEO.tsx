@@ -75,13 +75,13 @@ export default function SEO({
       <meta property="og:description" content={pageDescription} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={fullUrl} />
-      <meta property="og:image" content={image} />
+      <meta property="og:image" content={`${baseUrl}${image}`} />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={pageDescription} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content={`${baseUrl}${image}`} />
 
       {/* Hreflang links for alternate languages */}
       {supportedLangs.map((lang) => {
