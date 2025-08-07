@@ -27,10 +27,16 @@ export const Footer = () => {
         <div className={styles.footer__content}>
           <div>
             <p className={styles.footer__text}>{t("connect")}</p>
-            <p onClick={handleClick} className={styles.footer__subtext}>
+            <a
+              href="https://www.instagram.com/arenalvolcanicvillas?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+              className={styles.footer__subtext}
+            >
               {t("instagram")}
+            </a>
+            <p onClick={handleClick} className={styles.footer__subtext}>
+              {t("whatsapp")}
             </p>
-            <p className={styles.footer__subtext}>{t("whatsapp")}</p>
             <p className={styles.footer__subtext}>{t("facebook")}</p>
           </div>
 
