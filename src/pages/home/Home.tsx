@@ -20,8 +20,8 @@ export const Home = () => {
 
       <Hero />
       <WhatWeOffer />
-      <Faq />
       <Amenities />
+      <Faq />
       <Book />
     </>
   );
