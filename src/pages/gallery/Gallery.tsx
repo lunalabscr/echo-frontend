@@ -5,6 +5,7 @@ import useFancybox from "@/hooks/useFancybox";
 import type { Image } from "@/types/Image";
 import SEO from "@/components/SEO";
 import { useParams } from "react-router-dom";
+import { galleryNotDisplayed } from "@/constants/gallery";
 
 export const Gallery = () => {
   const { lang } = useParams();
@@ -47,68 +48,6 @@ export const Gallery = () => {
     },
   ];
 
-  const galleryNotDisplayed: Image[] = [
-    {
-      src: "/images/livingroom2-1200.webp",
-      alt: "Villa living room",
-    },
-    {
-      src: "/images/mainbedroom-1200.webp",
-      alt: "Villa main bedroom",
-    },
-    {
-      src: "/images/porch-1200.webp",
-      alt: "Villa outside view to the porch",
-    },
-    {
-      src: "/images/outside2-1200.webp",
-      alt: "Villa entrance",
-    },
-    {
-      src: "/images/bathroom-1200.webp",
-      alt: "Villa bathroom",
-    },
-    {
-      src: "/images/entrance-1200.webp",
-      alt: "Villa entrance",
-    },
-    {
-      src: "/images/drone-1200.webp",
-      alt: "Villa above view",
-    },
-    {
-      src: "/images/sidebedroom-1200.webp",
-      alt: "Villa main bedroom side view",
-    },
-    {
-      src: "/images/bathroom2-1200.webp",
-      alt: "Villa bathroom",
-    },
-    {
-      src: "/images/bedroom-1200.webp",
-      alt: "Villa main bedroom",
-    },
-    {
-      src: "/images/bedroom3-1200.webp",
-      alt: "Villa main bedroom",
-    },
-    {
-      src: "/images/bedroom4-1200.webp",
-      alt: "Villa main bedroom",
-    },
-    {
-      src: "/images/bedroom5-1200.webp",
-      alt: "Villa main bedroom",
-    },
-    {
-      src: "/images/hall-1200.webp",
-      alt: "Villa hall",
-    },
-    {
-      src: "/images/kitchen-1200.webp",
-      alt: "Villa kitchen",
-    },
-  ];
   return (
     <>
       <SEO
@@ -126,7 +65,7 @@ export const Gallery = () => {
             src="/images/drone-768.webp"
             srcSet={`/images/drone-400.webp 500w, /images/drone-768.webp 768w, /images/drone-1200.webp 1200w`}
             sizes="(max-width: 767px) 50vw, (max-width: 1199px) 100vw, 1200px"
-            alt=""
+            alt="Villa above view"
           />
         </div>
         <p className={styles.gallery__subtext}>{t("click-tosee")}</p>
@@ -150,12 +89,7 @@ export const Gallery = () => {
           <div style={{ display: "none" }}>
             {galleryNotDisplayed.map((item) => (
               <a key={item.src} data-fancybox="gallery" href={item.src}>
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  // srcSet={`${item.mobileSrc} 500w, ${item.tabletSrc} 768w, ${item.desktopSrc} 1200w`}
-                  // sizes="(max-width: 767px) 50vw, (max-width: 1199px) 100vw, 1200px"
-                />
+                <img src={item.src} alt={item.alt} />
               </a>
             ))}
           </div>
