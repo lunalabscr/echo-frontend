@@ -17,26 +17,29 @@ export const Faq = () => {
   ];
 
   return (
-    <Accordion type="multiple" className={styles.accordion}>
-      {accordionFaq.map((faq) => (
-        <AccordionItem
-          key={faq.value}
-          value={faq.value}
-          className={styles.accordion__item}
-        >
-          <AccordionTrigger className={styles.accordion__trigger}>
-            {faq.trigger}
-            {/* Use the data-state attribute to swap icons */}
-            <span className={styles.iconWrapper}>
-              <ChevronDown className={styles.iconClosed} />
-              <ChevronUp className={styles.iconOpen} />
-            </span>
-          </AccordionTrigger>
-          <AccordionContent className={styles.accordion__content}>
-            {faq.content}
-          </AccordionContent>
-        </AccordionItem>
-      ))}
-    </Accordion>
+    <>
+      <Accordion type="multiple" className={styles.accordion}>
+        <h2 className={styles.accordion__title}>{t("faq")}</h2>
+        {accordionFaq.map((faq) => (
+          <AccordionItem
+            key={faq.value}
+            value={faq.value}
+            className={styles.accordion__item}
+          >
+            <AccordionTrigger className={styles.accordion__trigger}>
+              {faq.trigger}
+              {/* Use the data-state attribute to swap icons */}
+              <span className={styles.iconWrapper}>
+                <ChevronDown className={styles.iconClosed} />
+                <ChevronUp className={styles.iconOpen} />
+              </span>
+            </AccordionTrigger>
+            <AccordionContent className={styles.accordion__content}>
+              {faq.content}
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </>
   );
 };
