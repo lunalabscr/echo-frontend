@@ -18,10 +18,15 @@
   &__item {
     border-radius: 8px;
     width: 100%;
-    background-color: colors.$gray;
+    // background-color: colors.$gray;
+    border-bottom: 1px solid colors.$gray;
   }
 
   &__trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     padding: 4px;
     text-align: left;
     height: 50px;
@@ -31,6 +36,7 @@
   &__content {
     background-color: colors.$background;
     overflow: hidden;
+    color: colors.$text-third;
 
     &[data-state="open"] {
       animation: slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1);
@@ -39,6 +45,25 @@
       animation: slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1);
     }
   }
+}
+
+.iconWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.iconOpen {
+  display: none;
+}
+
+[data-state="open"] .iconOpen {
+  display: inline;
+}
+
+[data-state="open"] .iconClosed {
+  display: none;
 }
 
 @keyframes slideDown {
