@@ -24,6 +24,7 @@ export const Faq = () => {
           src="/images/outside2-768.webp"
           srcSet={`/images/outside2-400.webp 500w, /images/outside2-768.webp 768w, /images/outside2-1200.webp 1200w`}
           sizes="(max-width: 767px) 50vw, (max-width: 1199px) 100vw, 1200px"
+          alt="Outside view of the villa"
         />
       </div>
       <Accordion type="multiple" className={styles.accordion}>
