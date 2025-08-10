@@ -9,7 +9,6 @@ import {
   PawPrint,
   CookingPot,
   WashingMachine,
-  Waves,
   UtensilsCrossed,
 } from "lucide-react";
 import styles from "./Amenities.module.scss";
@@ -23,7 +22,6 @@ export const Amenities = () => {
     { icon: Bath, label: t("amenities.bathrooms") },
     { icon: Tv, label: t("amenities.tv") },
     { icon: Snowflake, label: t("amenities.ac") },
-    { icon: Waves, label: t("amenities.pool") },
     { icon: Car, label: t("amenities.parking") },
     { icon: PawPrint, label: t("amenities.petFriendly") },
     { icon: CookingPot, label: t("amenities.bbq") },
