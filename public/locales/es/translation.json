@@ -60,5 +60,21 @@
     "subtext": "Desde piscinas brillantes hasta atardeceres en la terraza, deja que cada imagen inspire tu próxima estadía.",
     "title": "Vistas impresionantes de la villa.",
     "subtitle": "Explora comodidades y paisajes."
+  },
+  "terms-and-conditions": {
+    "pageTitle": "Términos y Política de Devolución",
+    "pageDescription": "Lee nuestras reglas de la casa y política de devoluciones para garantizar una estancia agradable.",
+    "title": "Términos y Política de Devolución",
+    "welcome": "¡Bienvenido a nuestra casa! Nos alegra mucho tenerte aquí.",
+    "intro": "Para asegurarnos de que tu estancia y la de futuros huéspedes sea lo más cómoda posible, tenemos unas simples reglas:",
+    "rule1": "No fumar dentro de la casa.",
+    "rule2": "No se permiten fiestas ni eventos.",
+    "rule3": "Por favor, respeta a nuestros vecinos y mantén el ruido al mínimo después de las 10 p.m.",
+    "rule4": "Cuida el mobiliario y la decoración. Agradeceríamos que trataras nuestra casa como la tuya.",
+    "rule5": "Informa de cualquier daño de inmediato. Avísanos enseguida si algo se rompe o se daña.",
+    "rule6": "Si tienes alguna pregunta, no dudes en consultarnos. ¡Esperamos que disfrutes tu estancia!",
+    "imageAlt1": "Vista aérea de la propiedad tomada con dron",
+    "imageAlt2": "Interior de cocina moderna",
+    "imageAlt3": "Jardín y terraza exterior"
   }
 }

@@ -58,5 +58,21 @@
     "subtext": "From sparkling pools to terrace sunsets, let each image inspire your next stay.",
     "title": "Stunning Villa Views.",
     "subtitle": "Browse amenities & landscapes."
+  },
+  "terms-and-conditions": {
+    "pageTitle": "Terms & Return Policy",
+    "pageDescription": "Read our house rules and return policy to ensure a pleasant stay.",
+    "title": "Terms & Return Policy",
+    "welcome": "Welcome to our home! We're so glad to have you.",
+    "intro": "To make sure your stay and the stays of future guests are as comfortable as possible, we have a few simple house rules:",
+    "rule1": "No smoking inside the house.",
+    "rule2": "No parties or events.",
+    "rule3": "Please respect our neighbors and keep noise to a minimum after 10 p.m.",
+    "rule4": "Be mindful of the furniture and decor. Please treat our home as you would your own.",
+    "rule5": "Report any damage immediately. Let us know right away if anything breaks or gets damaged.",
+    "rule6": "If you have any questions, feel free to ask. We hope you have a wonderful time!",
+    "imageAlt1": "Aerial view of the property taken by drone",
+    "imageAlt2": "Modern kitchen interior",
+    "imageAlt3": "Outside garden and terrace"
   }
 }
