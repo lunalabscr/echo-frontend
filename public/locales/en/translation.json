@@ -74,5 +74,19 @@
     "imageAlt1": "Aerial view of the property taken by drone",
     "imageAlt2": "Modern kitchen interior",
     "imageAlt3": "Outside garden and terrace"
+  },
+  "amenities": {
+    "title": "Amenities",
+    "wifi": "Free Wi-Fi",
+    "bedrooms": "3 Bedrooms",
+    "bathrooms": "2 Bathrooms",
+    "tv": "Smart TV",
+    "ac": "Air Conditioning",
+    "pool": "Private Pool",
+    "parking": "Free Parking",
+    "petFriendly": "Pet Friendly",
+    "bbq": "BBQ Grill",
+    "washerDryer": "Washer/Dryer",
+    "kitchen": "Full Kitchen"
   }
 }

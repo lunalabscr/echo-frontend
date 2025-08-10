@@ -4,6 +4,7 @@ import { Hero } from "@/components/hero";
 import { WhatWeOffer } from "@/components/whatweoffer";
 import { useParams } from "react-router-dom";
 import SEO from "@/components/SEO";
+import { Amenities } from "@/components/amenities";
 
 export const Home = () => {
   const { lang } = useParams();
@@ -20,6 +21,7 @@ export const Home = () => {
       <Hero />
       <WhatWeOffer />
       <Faq />
+      <Amenities />
       <Book />
     </>
   );

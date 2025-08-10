@@ -76,5 +76,19 @@
     "imageAlt1": "Vista aérea de la propiedad tomada con dron",
     "imageAlt2": "Interior de cocina moderna",
     "imageAlt3": "Jardín y terraza exterior"
+  },
+  "amenities": {
+    "title": "Comodidades",
+    "wifi": "Wi-Fi gratis",
+    "bedrooms": "3 Dormitorios",
+    "bathrooms": "2 Baños",
+    "tv": "Televisión inteligente",
+    "ac": "Aire acondicionado",
+    "pool": "Piscina privada",
+    "parking": "Estacionamiento gratuito",
+    "petFriendly": "Apto para mascotas",
+    "bbq": "Parrilla BBQ",
+    "washerDryer": "Lavadora/Secadora",
+    "kitchen": "Cocina completa"
   }
 }
