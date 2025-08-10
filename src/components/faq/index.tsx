@@ -17,7 +17,15 @@ export const Faq = () => {
   ];
 
   return (
-    <>
+    <div className={styles.wrapper}>
+      <div className={styles["wrapper__image-wrapper"]}>
+        <img
+          className={styles.wrapper__image}
+          src="/images/outside2-768.webp"
+          srcSet={`/images/outside2-400.webp 500w, /images/outside2-768.webp 768w, /images/outside2-1200.webp 1200w`}
+          sizes="(max-width: 767px) 50vw, (max-width: 1199px) 100vw, 1200px"
+        />
+      </div>
       <Accordion type="multiple" className={styles.accordion}>
         <h2 className={styles.accordion__title}>{t("faq")}</h2>
         {accordionFaq.map((faq) => (
@@ -40,6 +48,6 @@ export const Faq = () => {
           </AccordionItem>
         ))}
       </Accordion>
-    </>
+    </div>
   );
 };
