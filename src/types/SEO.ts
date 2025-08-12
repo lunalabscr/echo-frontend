@@ -1,7 +1,8 @@
 export interface SEOProps {
-  title: string;
-  description?: string;
-  keywords?: string;
-  url?: string;
+  titleKey: string;
+  descriptionKey: string;
   image?: string;
+  path: string;
+  priceRange?: string;
+  keywords?: string;
 }

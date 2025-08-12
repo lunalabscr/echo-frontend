@@ -1,65 +1,64 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
-
-interface SEOProps {
-  titleKey: string;
-  descriptionKey: string;
-  image?: string;
-  path: string;
-  priceRange?: string;
-}
+import type { SEOProps } from "@/types/SEO";
+import { SITE_CONFIG, SEO_DEFAULTS } from "@/constants/site";
 
 export default function SEO({
   titleKey,
   descriptionKey,
-  image = "/images/drone-1200.webp",
+  image = SITE_CONFIG.defaultImage,
   path,
-  priceRange = "$100 - $300",
+  priceRange = SITE_CONFIG.defaultPriceRange,
+  keywords: customKeywords,
 }: SEOProps) {
   const { t } = useTranslation();
   const currentLang = i18n.language || "en";
-  const baseUrl = "https://www.arenalvolcanicvillas.com";
 
-  const pageImage = `${baseUrl}${image}`;
+  const pageImage = `${SITE_CONFIG.baseUrl}${image}`;
+  const fullUrl = currentLang === "en" 
+    ? `${SITE_CONFIG.baseUrl}${path}`
+    : `${SITE_CONFIG.baseUrl}/${currentLang}${path}`;
 
-  const fullUrl =
-    currentLang === "en"
-      ? `${baseUrl}${path}`
-      : `${baseUrl}/${currentLang}${path}`;
-
-  // Se asegura de que los valores por defecto sean en inglés
   const pageTitle = t(titleKey, {
-    defaultValue: "Arenal Volcanic Villas",
+    defaultValue: SEO_DEFAULTS.title,
   });
+  
   const pageDescription = t(descriptionKey, {
-    defaultValue: "Luxury villas near Arenal Volcano, Costa Rica.",
+    defaultValue: SEO_DEFAULTS.description,
   });
 
-  const keywords = t("seo.keywords", {
-    defaultValue:
-      "Arenal Costa Rica villas, hotel near Arenal Volcano, luxury villas",
+  const keywords = customKeywords || t("seo.keywords", {
+    defaultValue: SEO_DEFAULTS.keywords,
   });
 
-  const supportedLangs = ["en", "es", "pt"];
-
-  const hotelSchema = {
+  const structuredData = {
     "@context": "https://schema.org",
     "@type": "Hotel",
-    name: "Arenal Volcanic Villas",
+    name: SITE_CONFIG.siteName,
     description: pageDescription,
     url: fullUrl,
-    image: pageImage,
-    priceRange: priceRange,
+    image: [pageImage],
+    priceRange,
     address: {
       "@type": "PostalAddress",
-      addressCountry: "CR",
-      addressLocality: "La Fortuna",
-      addressRegion: "Alajuela",
-      postalCode: "21007",
-      streetAddress: "La Fortuna, Alajuela, Costa Rica",
+      addressCountry: SITE_CONFIG.address.country,
+      addressLocality: SITE_CONFIG.address.locality,
+      addressRegion: SITE_CONFIG.address.region,
+      postalCode: SITE_CONFIG.address.postalCode,
+      streetAddress: SITE_CONFIG.address.street,
     },
-    telephone: "+506-8554-3228",
+    telephone: SITE_CONFIG.contact.phone,
+    amenityFeature: [
+      { "@type": "LocationFeatureSpecification", name: "WiFi" },
+      { "@type": "LocationFeatureSpecification", name: "Parking" },
+      { "@type": "LocationFeatureSpecification", name: "Air Conditioning" }
+    ],
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: SITE_CONFIG.geo.latitude,
+      longitude: SITE_CONFIG.geo.longitude,
+    }
   };
 
   return (
@@ -74,33 +73,38 @@ export default function SEO({
       <meta name="author" content="Arenal Volcanic Villas" />
       <link rel="canonical" href={fullUrl} />
 
-      <meta
-        property="og:title"
-        content={`${pageTitle} | Arenal Volcanic Villas`}
-      />
+      {/* Open Graph */}
+      <meta property="og:title" content={`${pageTitle} | ${SITE_CONFIG.siteName}`} />
       <meta property="og:description" content={pageDescription} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:image" content={pageImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:site_name" content={SITE_CONFIG.siteName} />
+      <meta property="og:locale" content={currentLang === "en" ? "en_US" : currentLang === "es" ? "es_ES" : "pt_BR"} />
 
+      {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta
-        name="twitter:title"
-        content={`${pageTitle} | Arenal Volcanic Villas`}
-      />
+      <meta name="twitter:title" content={`${pageTitle} | ${SITE_CONFIG.siteName}`} />
       <meta name="twitter:description" content={pageDescription} />
       <meta name="twitter:image" content={pageImage} />
 
-      {supportedLangs.map((lang) => {
-        const href =
-          lang === "en" ? `${baseUrl}${path}` : `${baseUrl}/${lang}${path}`;
+      {/* Hreflang */}
+      {SITE_CONFIG.supportedLangs.map((lang) => {
+        const href = lang === "en" 
+          ? `${SITE_CONFIG.baseUrl}${path}` 
+          : `${SITE_CONFIG.baseUrl}/${lang}${path}`;
         return <link key={lang} rel="alternate" hrefLang={lang} href={href} />;
       })}
-      <link rel="alternate" hrefLang="x-default" href={`${baseUrl}${path}`} />
+      <link rel="alternate" hrefLang="x-default" href={`${SITE_CONFIG.baseUrl}${path}`} />
 
+      {/* Favicon */}
       <link rel="icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-      <script type="application/ld+json">{JSON.stringify(hotelSchema)}</script>
+      {/* Structured Data */}
+      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
     </Helmet>
   );
 }

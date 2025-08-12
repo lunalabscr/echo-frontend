@@ -16,11 +16,20 @@
 .hero {
   position: relative;
   scroll-margin-top: 80px;
-
   background-image: url("/images/arenal-volcano.webp");
-
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  
+  // Improve performance on mobile
+  @media (max-width: 768px) {
+    background-attachment: scroll;
+  }
+  
+  // Reduce motion for users who prefer it
+  @media (prefers-reduced-motion: reduce) {
+    background-attachment: scroll;
+  }
 
   &__h1 {
     @include helpers.visually-hidden;
