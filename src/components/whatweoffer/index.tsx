@@ -28,15 +28,18 @@ export const WhatWeOffer = () => {
       id: "offer-3",
       title: t("adv-door"),
       subtitle: t("adv-door-desc"),
-      image: "/images/IMG_3319-768.webp",
-      mobileImage: "/images/IMG_3319-400.webp", // Optional mobile-specific image
-      desktopImage: "/images/IMG_3319-1200.webp", // Optional desktop-specific image
-      tabletImage: "/images/IMG_3319-768.webp", // Optional tablet-specific image
+      image: "/images/nightoutside-768.webp",
+      mobileImage: "/images/nightoutside-400.webp", // Optional mobile-specific image
+      desktopImage: "/images/nightoutside-1200.webp", // Optional desktop-specific image
+      tabletImage: "/images/nightoutside-768.webp", // Optional tablet-specific image
     },
   ];
 
   return (
     <section className={styles.offers} id="about">
+      <p className={styles.offers__subtitle}>{t("about")}</p>
+      {/* <br /> */}
+      <p className={styles.offers__subtitle}>{t("about-2")}</p>
       {whatWeOffer.map((offer, index) => (
         <article key={offer.id} className={styles.offers__grid}>
           <div
