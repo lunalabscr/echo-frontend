@@ -83,14 +83,15 @@
   "amenities": {
     "title": "Comodidades",
     "wifi": "Wi-Fi gratis",
-    "bedrooms": "3 Dormitorios",
-    "bathrooms": "2 Baños",
+    "bedrooms": "Dos Dormitorios",
+    "bathrooms": "Dos Baños",
     "tv": "Televisión inteligente",
     "ac": "Aire acondicionado",
     "parking": "Estacionamiento gratuito",
     "petFriendly": "Apto para mascotas",
     "bbq": "Parrilla BBQ",
     "washerDryer": "Lavadora/Secadora",
-    "kitchen": "Cocina completa"
+    "kitchen": "Cocina completa",
+    "jacuzzi": "Un jacuzzi privado"
   }
 }

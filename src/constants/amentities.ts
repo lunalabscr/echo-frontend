@@ -7,6 +7,7 @@ import {
   Car,
   PawPrint,
   UtensilsCrossed,
+  WavesLadder,
 } from "lucide-react";
 
 export const amenities = [
@@ -18,4 +19,5 @@ export const amenities = [
   { icon: Car, label: "amenities.parking" },
   { icon: PawPrint, label: "amenities.petFriendly" },
   { icon: UtensilsCrossed, label: "amenities.kitchen" },
+  { icon: WavesLadder, label: "amenities.jacuzzi" },
 ];

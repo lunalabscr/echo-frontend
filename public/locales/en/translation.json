@@ -81,14 +81,15 @@
   "amenities": {
     "title": "Amenities",
     "wifi": "Free Wi-Fi",
-    "bedrooms": "3 Bedrooms",
-    "bathrooms": "2 Bathrooms",
+    "bedrooms": "Two Bedrooms",
+    "bathrooms": "Two Bathrooms",
     "tv": "Smart TV",
     "ac": "Air Conditioning",
     "parking": "Free Parking",
     "petFriendly": "Pet Friendly",
     "bbq": "BBQ Grill",
     "washerDryer": "Washer/Dryer",
-    "kitchen": "Full Kitchen"
+    "kitchen": "Full Kitchen",
+    "jacuzzi": "One Private Jacuzzi"
   }
 }

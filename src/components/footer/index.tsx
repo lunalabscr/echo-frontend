@@ -22,6 +22,7 @@ export const Footer = () => {
           <img
             className={styles["footer__logo"]}
             alt="Arenal Volcanic Villas logo"
+            src="/images/AVV-01.png"
           />
         </div>
         <div className={styles.footer__content}>

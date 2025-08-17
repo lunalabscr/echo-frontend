@@ -18,33 +18,33 @@ export const Gallery = () => {
       src: "/images/mainbedroom-768.webp",
       alt: "Villa main bedroom",
       className: styles["gallery__picture"],
-      mobileSrc: "/images/mainbedroom-400.webp", // Optional mobile image
-      desktopSrc: "/images/mainbedroom-1200.webp", // Optional desktop image
-      tabletSrc: "/images/mainbedroom-768.webp", // Optional tablet image
+      mobileSrc: "/images/mainbedroom-400.webp",
+      desktopSrc: "/images/mainbedroom-1200.webp",
+      tabletSrc: "/images/mainbedroom-768.webp",
     },
     {
       src: "/images/kitchen-768.webp",
       alt: "Villa kitchen",
       className: styles["gallery__picture"],
-      mobileSrc: "/images/kitchen-400.webp", // Optional mobile image
-      desktopSrc: "/images/kitchen-1200.webp", // Optional desktop image
-      tabletSrc: "/images/kitchen-768.webp", // Optional tablet image
+      mobileSrc: "/images/kitchen-400.webp",
+      desktopSrc: "/images/kitchen-1200.webp",
+      tabletSrc: "/images/kitchen-768.webp",
     },
     {
       src: "/images/livingroom-768.webp",
       alt: "Villa living room",
       className: styles["gallery__picture"],
-      mobileSrc: "/images/livingroom-400.webp", // Optional mobile image
-      desktopSrc: "/images/livingroom-1200.webp", // Optional desktop image
-      tabletSrc: "/images/livingroom-768.webp", // Optional tablet image
+      mobileSrc: "/images/livingroom-400.webp",
+      desktopSrc: "/images/livingroom-1200.webp",
+      tabletSrc: "/images/livingroom-768.webp",
     },
     {
       src: "/images/outside-768.webp",
       alt: "Villa outside view",
       className: styles["gallery__picture"],
-      mobileSrc: "/images/outside-400.webp", // Optional mobile image
-      desktopSrc: "/images/outside-1200.webp", // Optional desktop image
-      tabletSrc: "/images/outside-768.webp", // Optional tablet image
+      mobileSrc: "/images/outside-400.webp",
+      desktopSrc: "/images/outside-1200.webp",
+      tabletSrc: "/images/outside-768.webp",
     },
   ];
 

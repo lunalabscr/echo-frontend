@@ -38,8 +38,11 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.header__items}>
-        <Link className={styles["header__small-item"]} to="/">
-          AVV
+        <Link
+          className={clsx(styles["header__small-item"], styles["header__logo"])}
+          to="/"
+        >
+          <img src="/images/AVV-10.png" />
         </Link>
         <div className={styles["header__item-wrapper"]}>
           <a
@@ -57,8 +60,11 @@ export const Header = () => {
             {t("about")}
           </a>
         </div>
-        <Link className={styles["header__large-item"]} to="/">
-          AVV
+        <Link
+          className={clsx(styles["header__large-item"], styles["header__logo"])}
+          to="/"
+        >
+          <img src="/images/AVV-10.png" />
         </Link>
         <div className={styles["header__item-wrapper"]}>
           <a
