@@ -7,6 +7,7 @@ import { Outlet, useParams } from "react-router-dom";
 import "@styles/globals.scss";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
+import { WhatsappFab } from "@/components/WhatsAppFab";
 
 export const Layout = () => {
   const { lang } = useParams();
@@ -17,11 +18,13 @@ export const Layout = () => {
   useEffect(() => {
     const currentLang = lang || defaultLang;
 
-    if (supportedLangs.includes(currentLang as typeof supportedLangs[number])) {
+    if (
+      supportedLangs.includes(currentLang as (typeof supportedLangs)[number])
+    ) {
       i18n.changeLanguage(currentLang);
     } else if (lang) {
       // Redirect to default language if unsupported language is provided
-      window.location.replace('/');
+      window.location.replace("/");
     }
   }, [lang, i18n]);
 
@@ -33,6 +36,7 @@ export const Layout = () => {
       </a>
       <Header />
       <main id="main-content" role="main">
+        <WhatsappFab />
         <Outlet />
       </main>
       <Footer />
