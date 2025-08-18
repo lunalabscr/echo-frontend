@@ -2,6 +2,7 @@ import SEO from "@/components/SEO";
 import styles from "./index.module.scss";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Check } from "lucide-react";
 
 export const TermsAndConditions = () => {
   const { lang } = useParams();
@@ -56,7 +57,10 @@ export const TermsAndConditions = () => {
         <p>{t("intro")}</p>
         <ul>
           {[1, 2, 3, 4, 5, 6].map((num) => (
-            <li key={num}>{t(`rule${num}`)}</li>
+            <li key={num}>
+              <Check className={styles["terms__icon"]} size={24} />
+              <p className={styles["terms__rule"]}>{t(`rule${num}`)}</p>
+            </li>
           ))}
         </ul>
         <p>{t("closing")} </p>
