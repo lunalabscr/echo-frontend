@@ -17,7 +17,7 @@
     "book-stay": "Reservar estadía"
   },
   "whatweoffer": {
-    "about": "Enclavada en un entorno natural privilegiado, nuestra villa ofrece dos unidades completamente equipadas que pueden alquilarse de manera independiente o como un único complejo interconectado, brindando flexibilidad y privacidad según sus necesidades. Cada unidad cuenta con una cocina totalmente equipada, ideal para preparar sus platillos favoritos, así como un jacuzzi pensado para la relajación absoluta.",
+    "about": "Enclavada en un entorno natural privilegiado, nuestra villa ofrece dos unidades completamente equipadas que pueden alquilarse de manera independiente o como un único complejo interconectado para hasta 10 personas, brindando flexibilidad y privacidad según sus necesidades. Cada unidad cuenta con una cocina totalmente equipada, ideal para preparar sus platillos favoritos, así como un jacuzzi pensado para la relajación absoluta.",
     "about-2": "Disfrute de un encantador front porch y un back porch, perfectos para admirar la naturaleza que nos rodea. Desde cada rincón de la propiedad, podrá deleitarse con las impresionantes y majestuosas vistas al Volcán Arenal. Reserve fácilmente una villa o todo el complejo a través de WhatsApp y viva una experiencia de hospedaje única e inolvidable.",
     "volcano-views": "Vistas impresionantes del volcán",
     "volcano-views-desc": "Despierta cada mañana con vistas increíbles al Volcán Arenal desde tu ventana.",
@@ -68,14 +68,15 @@
     "pageTitle": "Términos y Política de Devolución",
     "pageDescription": "Lee nuestras reglas de la casa y política de devoluciones para garantizar una estancia agradable.",
     "title": "Términos y Política de Devolución",
-    "welcome": "¡Bienvenido a nuestra casa! Nos alegra mucho tenerte aquí.",
-    "intro": "Para asegurarnos de que tu estancia y la de futuros huéspedes sea lo más cómoda posible, tenemos unas simples reglas:",
-    "rule1": "No fumar dentro de la casa.",
-    "rule2": "No se permiten fiestas ni eventos.",
-    "rule3": "Por favor, respeta a nuestros vecinos y mantén el ruido al mínimo después de las 10 p.m.",
-    "rule4": "Cuida el mobiliario y la decoración. Agradeceríamos que trataras nuestra casa como la tuya.",
-    "rule5": "Informa de cualquier daño de inmediato. Avísanos enseguida si algo se rompe o se daña.",
-    "rule6": "Si tienes alguna pregunta, no dudes en consultarnos. ¡Esperamos que disfrutes tu estancia!",
+    "intro": "¡Bienvenido a Arenal Volcanic Villas! Estamos encantados de recibirte y esperamos que tu estancia sea cómoda y relajante. Para garantizar una experiencia agradable y sin inconvenientes para todos, te pedimos amablemente que sigas algunas pautas importantes durante tu estadía.",
+
+    "rule1": "El check-in está disponible a partir de las 3:00 PM con auto check-in mediante nuestra cerradura inteligente. Por favor utiliza el código de acceso proporcionado y asegúrate de no compartirlo con nadie que no esté registrado como huésped. La hora de check-out es la acordada, y te solicitamos que todas las puertas y ventanas queden bien cerradas antes de salir.",
+    "rule2": "Se proporciona Wi-Fi para tu comodidad, y te pedimos que lo uses de manera responsable. Evita descargas ilegales o actividades que puedan comprometer la red.",
+    "rule3": "Por la seguridad y comodidad de todos los huéspedes, no se permite fumar dentro de la villa, y las fiestas o eventos están estrictamente prohibidos. Las horas de silencio son de 10:00 PM a 8:00 AM, y las estadías nocturnas se limitan únicamente a los huéspedes registrados. Se permiten mascotas con aprobación previa y un pequeño cargo adicional. Los huéspedes deben desechar la basura y el reciclaje en las áreas designadas y tratar la villa y su mobiliario con cuidado.",
+    "rule4": "Nuestro jacuzzi está disponible para tu disfrute, y te pedimos que sigas las pautas proporcionadas para garantizar seguridad e higiene. Por favor dúchate antes de entrar, no uses envases de vidrio y limita el uso a 15–30 minutos por vez. Los niños menores de 12 años deben estar supervisados, y los huéspedes con problemas de salud o embarazadas deben consultar a un médico antes de usarlo. Siempre apaga los chorros y las luces después de usarlo, y coloca nuevamente la cubierta para mantener el agua limpia y conservar el calor. Evita usar jabones, aceites, espuma de baño o manipular los ajustes de agua o químicos.",
+    "rule5": "Los huéspedes son responsables de su propia seguridad al usar las comodidades de la propiedad. El anfitrión no es responsable por lesiones resultantes de un mal uso, negligencia o incumplimiento de las pautas establecidas. Por favor deja la villa en buenas condiciones; cualquier daño o limpieza excesiva requerida puede resultar en cargos adicionales.",
+    "rule6": "En caso de emergencias, marca 911 o contacta el hospital más cercano, Clínica Sanar. Para cualquier otra consulta o inquietud, por favor comunícate con nosotros a través de la app de Airbnb, por teléfono al +506 83095411 o por correo electrónico a mongekm7@gmail.com.",
+    "closing": "Gracias por elegir Arenal Volcanic Villas. Al hospedarte con nosotros, aceptas estas políticas y apreciamos sinceramente tu cooperación para ayudarnos a mantener un entorno seguro, cómodo y agradable. ¡Esperamos que disfrutes tu estadía y aproveches al máximo todo lo que nuestra hermosa ubicación tiene para ofrecer!",
     "imageAlt1": "Vista aérea de la propiedad tomada con dron",
     "imageAlt2": "Interior de cocina moderna",
     "imageAlt3": "Jardín y terraza exterior"

@@ -53,13 +53,13 @@ export const TermsAndConditions = () => {
       />
       <p className={styles["terms__terms-text"]}>{t("title")}</p>
       <div className={styles["terms__text"]}>
-        <p>{t("welcome")}</p>
         <p>{t("intro")}</p>
         <ul>
           {[1, 2, 3, 4, 5, 6].map((num) => (
             <li key={num}>{t(`rule${num}`)}</li>
           ))}
         </ul>
+        <p>{t("closing")} </p>
       </div>
 
       <div className={styles["terms__image-container"]}>
