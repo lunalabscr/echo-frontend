@@ -81,8 +81,8 @@
   "amenities": {
     "title": "Comodidades",
     "wifi": "Wi-Fi grátis",
-    "bedrooms": "Dois Quartos",
-    "bathrooms": "Dois Banheiros",
+    "bedrooms": "Dois Quartos por villa",
+    "bathrooms": "Um Banheiro por villa",
     "tv": "Smart TV",
     "ac": "Ar-condicionado",
     "parking": "Estacionamento grátis",
