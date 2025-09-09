@@ -8,6 +8,7 @@ import {
   PawPrint,
   UtensilsCrossed,
   WavesLadder,
+  LandPlot,
 } from "lucide-react";
 
 export const amenities = [
@@ -20,4 +21,5 @@ export const amenities = [
   { icon: PawPrint, label: "amenities.petFriendly" },
   { icon: UtensilsCrossed, label: "amenities.kitchen" },
   { icon: WavesLadder, label: "amenities.jacuzzi" },
+  { icon: LandPlot, label: "amenities.pickle" },
 ];

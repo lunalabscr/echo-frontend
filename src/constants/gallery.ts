@@ -69,4 +69,17 @@ export const galleryNotDisplayed: Image[] = [
     src: "/images/jacuzzi-1200.webp",
     alt: "Villa Jacuzzi",
   },
+  {
+    src: "/images/drone1-1200.webp",
+    alt: "Villa Entrance",
+  },
+
+  {
+    src: "/images/drone2-1200.webp",
+    alt: "Villa Parking",
+  },
+  {
+    src: "/images/drone3-1200.webp",
+    alt: "Villa Entrance",
+  },
 ];
