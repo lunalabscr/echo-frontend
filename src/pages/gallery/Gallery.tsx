@@ -62,8 +62,8 @@ export const Gallery = () => {
         <div className={styles["gallery__main-picture-wrapper"]}>
           <img
             className={styles["gallery__main-picture"]}
-            src="/images/IMG_3595-768.webp"
-            srcSet={`/images/IMG_3595-400.webp 500w, /images/IMG_3595-768.webp 768w, /images/IMG_3595-1200.webp 1200w`}
+            src="/images/drone4-1200.webp"
+            srcSet={`/images/drone4-400.webp 500w, /images/drone4-768.webp 768w, /images/drone4-1200.webp 1200w`}
             sizes="(max-width: 767px) 50vw, (max-width: 1199px) 100vw, 1200px"
             alt="Villa above view"
           />
