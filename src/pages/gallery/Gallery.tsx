@@ -55,12 +55,13 @@ export const Gallery = () => {
         descriptionKey="seo.galleryDescription"
         path={`${baseRoute}/gallery`}
       />
-      <section className={styles.gallery}>
+      <section ref={ref} className={styles.gallery}>
         <h1 className={styles.gallery__h1}>Arenal Volcanic Villas</h1>
         <p className={styles.gallery__title}>{t("title")}</p>
         <p className={styles.gallery__subtitle}>{t("subtitle")}</p>
         <div className={styles["gallery__main-picture-wrapper"]}>
           <img
+            data-fancybox="gallery"
             className={styles["gallery__main-picture"]}
             src="/images/drone4-1200.webp"
             srcSet={`/images/drone4-400.webp 500w, /images/drone4-768.webp 768w, /images/drone4-1200.webp 1200w`}
@@ -69,7 +70,7 @@ export const Gallery = () => {
           />
         </div>
         <p className={styles.gallery__subtext}>{t("click-tosee")}</p>
-        <div ref={ref} className={styles["gallery__grid-gallery"]}>
+        <div className={styles["gallery__grid-gallery"]}>
           {galleryList.map((item, index) => (
             <a
               data-fancybox="gallery"
