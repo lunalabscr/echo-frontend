@@ -28,10 +28,10 @@ export const WhatWeOffer = () => {
       id: "offer-3",
       title: t("adv-door"),
       subtitle: t("adv-door-desc"),
-      image: "/images/nightoutside-768.webp",
-      mobileImage: "/images/nightoutside-400.webp", // Optional mobile-specific image
-      desktopImage: "/images/nightoutside-1200.webp", // Optional desktop-specific image
-      tabletImage: "/images/nightoutside-768.webp", // Optional tablet-specific image
+      image: "/images/cancha1.webp",
+      mobileImage: "/images/cancha6-400.webp", // Optional mobile-specific image
+      desktopImage: "/images/cancha6-1200.webp", // Optional desktop-specific image
+      tabletImage: "/images/cancha6-768.webp", // Optional tablet-specific image
     },
   ];
 

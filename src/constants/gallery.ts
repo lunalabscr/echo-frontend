@@ -82,4 +82,20 @@ export const galleryNotDisplayed: Image[] = [
     src: "/images/drone3-1200.webp",
     alt: "Villa Entrance",
   },
+  {
+    src: "/images/cancha6-1200.webp",
+    alt: "Villa pickle ball court",
+  },
+  {
+    src: "/images/cancha1-1200.webp",
+    alt: "Villa pickle ball court",
+  },
+  {
+    src: "/images/cancha2-1200.webp",
+    alt: "Villa pickle ball court",
+  },
+  {
+    src: "/images/cancha3-1200.webp",
+    alt: "Villa pickle ball court",
+  },
 ];
