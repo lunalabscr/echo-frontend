@@ -83,6 +83,13 @@ export const Header = () => {
           <a onClick={handleClick} className={styles.header__item} href="#book">
             {t("book-now")}
           </a>
+          <a
+            className={styles.header__item}
+            href="https://app.playtomic.io/tenant/64514c05-21b2-4a77-a3e2-d9c5bf157e7d"
+            target="_blank"
+          >
+            {t("book-court")}
+          </a>
         </div>
       </nav>
     </header>
