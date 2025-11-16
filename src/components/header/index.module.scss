@@ -50,4 +50,125 @@
       object-fit: cover;
     }
   }
+  // ... (rest of the SASS)
+
+  &__items {
+    @include mixins.container;
+    @include mixins.flex-center;
+    // Set up the main container to use space-between
+    // for the three main groups (Left Group, Logo, Right Group)
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__desktop-items-group {
+    @include mixins.flex-center;
+    // On mobile, hide this entire group
+    display: none;
+    @include mixins.respond-to(md) {
+      // On desktop, display it
+      display: flex;
+    }
+  }
+
+  &__left-spacer {
+    // This element will only be visible on desktop
+    display: none;
+    @include mixins.respond-to(md) {
+      // Set the width of the spacer to match one of the link items
+      // plus the gap between items (15px) to balance the layout.
+      // Assuming all links have a similar minimum width, this works.
+      display: block;
+      width: 100px;
+      margin-left: 15px; // Matches the gap of the item-wrapper
+      // A safer alternative if you cannot estimate the link width:
+      // use another empty item-wrapper and hide a child.
+      // But for simple centering, this fixed width is often enough.
+      // Try using an empty item and hiding it with visibility: hidden;
+
+      // Let's use visibility: hidden on a full link element inside the wrapper for perfect alignment.
+      // However, sticking to the JSX change above:
+      // You must use a **fixed width** that is roughly the size of one link to compensate for the imbalance.
+      // If links are roughly 60px wide, and gap is 15px:
+      // width: 60px;
+      // margin-left: 15px;
+
+      // A more robust way to handle dynamic width with the existing structure:
+      // Remove header__left-spacer from JSX.
+      // Change header__desktop-items-group to use 'justify-content: flex-end;'
+      // And use the following CSS changes:
+    }
+  }
+
+  // *** BETTER SASS/CSS APPROACH FOR ALIGNMENT ***
+  // *If you revert the JSX back to the original `header__item-wrapper` for the left links,*
+  // *and wrap the right links in a parent container:*
+
+  // Revert JSX to:
+  // <div className={styles["header__item-wrapper"]}>...home/about...</div>
+  // <Link ... large logo ... />
+  // <div className={styles["header__right-group"]}> // NEW WRAPPER
+  //    <div className={styles["header__item-wrapper"]}>...gallery/book-now/book-court...</div>
+  // </div>
+
+  // And apply this SASS logic:
+
+  &__items {
+    @include mixins.container;
+    @include mixins.flex-center;
+    // This is the key: it allows the left wrapper to take the full width of the right wrapper
+    // and push the logo visually to the center.
+    justify-content: center;
+    width: 100%;
+
+    // Add an empty element on the left for balance (you'd need to add it to JSX)
+    .header__item-wrapper:first-of-type {
+      // This is where you would introduce the balancing negative margin
+      // or ensure the left side has the same number of items (3) as the right side.
+      // Since the right has 3 items and left has 2, the current space-between is the problem.
+    }
+  }
+
+  // --- FINAL SIMPLE SOLUTION: Flex Grow + Spacer ---
+  // Stick to the JSX with `header__desktop-items-group` and `header__left-spacer`
+
+  // In `index.module.scss`:
+
+  &__items {
+    @include mixins.container;
+    @include mixins.flex-center;
+    // Use `space-between` to create three columns: Left Group, Logo, Right Group
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__desktop-items-group {
+    // This is the new container for the desktop-only left items
+    display: none;
+    @include mixins.respond-to(md) {
+      display: flex;
+      // This is the key: The group on the left will take up more space
+      // to push the logo to the center relative to the right group.
+      justify-content: flex-end; // Push the actual links to the right edge of this group
+    }
+  }
+
+  &__left-spacer {
+    // This element will only be visible on desktop, hidden on mobile
+    display: none;
+    @include mixins.respond-to(md) {
+      // This element is the one that forces the center alignment.
+      // It acts as the "dummy" third item on the left side.
+      display: block;
+      // Its width and margin must exactly match one of the link items on the right side.
+      // Without knowing the font size/link width, this is a guess,
+      // but matching the gap is a good start.
+      // Since it's outside the item-wrapper, only match the width of a link.
+      // The `justify-content: space-between` on `__items` will handle the spacing.
+
+      // Let's use a fixed value that is likely wider than a link to ensure centering:
+      // (This will require fine-tuning for your exact link text/font size)
+      width: 75px;
+    }
+  }
 }
