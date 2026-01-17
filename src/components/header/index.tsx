@@ -34,25 +34,22 @@ export const Header = () => {
       if (el) el.scrollIntoView({ behavior: "smooth" });
     }
   };
-  // ... (rest of the component)
   return (
     <header className={styles.header}>
       <nav className={styles.header__items}>
-        {/* 1. Small Logo (Mobile) */}
         <Link
           className={clsx(styles["header__small-item"], styles["header__logo"])}
           to="/"
         >
           <img src="/images/AVV-10.png" />
         </Link>
-        {/* 2. Desktop Items Wrapper - Contains Left Links and Spacer */}
         <div className={styles["header__desktop-items-group"]}>
           <div className={styles["header__item-wrapper"]}>
             <a
               href="#home"
               className={clsx(
                 styles.header__item,
-                styles["header__large-item"]
+                styles["header__large-item"],
               )}
               onClick={() => handleHomeClick("home")}
             >
@@ -62,24 +59,21 @@ export const Header = () => {
               href="#about"
               className={clsx(
                 styles.header__item,
-                styles["header__large-item"]
+                styles["header__large-item"],
               )}
               onClick={() => handleHomeClick("about")}
             >
               {t("about")}
             </a>
           </div>
-          {/* 3. The empty div for balancing the desktop layout */}
           <div className={styles["header__left-spacer"]} />
         </div>
-        {/* 4. Large Logo (Desktop) - This will be the visual center */}
         <Link
           className={clsx(styles["header__large-item"], styles["header__logo"])}
           to="/"
         >
           <img src="/images/AVV-10.png" />
         </Link>
-        {/* 5. Mobile/Right Links Wrapper - No change here */}
         <div className={styles["header__item-wrapper"]}>
           <a
             href="#home"
@@ -104,7 +98,7 @@ export const Header = () => {
           </a>
           <a
             className={clsx(styles.header__item, styles["header__large-item"])}
-            href="https://app.playtomic.io/tenant/64514c05-21b2-4a77-a3e2-d9c5bf157e7d"
+            onClick={handleClick}
             target="_blank"
           >
             {t("book-court")}
@@ -124,7 +118,7 @@ export const Header = () => {
           </a>
           <a
             className={clsx(styles.header__item, styles["header__small-item"])}
-            href="https://app.playtomic.io/tenant/64514c05-21b2-4a77-a3e2-d9c5bf157e7d"
+            onClick={handleClick}
             target="_blank"
           >
             {t("book-court")}
