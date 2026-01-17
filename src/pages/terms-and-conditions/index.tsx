@@ -26,7 +26,7 @@ export const TermsAndConditions = () => {
     {
       name: "kitchen2",
       alt: t("imageAlt2"),
-      default: "/images/kitchen2-1200.webp",
+      default: "/images/kitchen2-768.webp",
       sources: [
         "/images/kitchen2-400.webp 500w",
         "/images/kitchen2-768.webp 768w",
