@@ -5,6 +5,8 @@
   @include mixins.flex-center;
   height: 64px;
   width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
   position: fixed;
   background-color: colors.$background;
   box-shadow: 0px 8px 24px rgba(149, 149, 149, 0.2);
@@ -12,9 +14,37 @@
 
   &__items {
     @include mixins.container;
-    @include mixins.flex-center;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
+    box-sizing: border-box;
+
+    @include mixins.respond-to(md) {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+    }
+  }
+
+  &__left {
+    display: none;
+    @include mixins.respond-to(md) {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  &__center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 
   &__item-wrapper {
@@ -27,16 +57,73 @@
     font-weight: bold;
   }
   &__small-item {
-    display: block;
+    display: flex !important;
     @include mixins.respond-to(md) {
-      display: none;
+      display: none !important;
     }
   }
 
   &__large-item {
-    display: none;
+    display: none !important;
     @include mixins.respond-to(md) {
-      display: block;
+      display: flex !important;
+    }
+  }
+
+  &__desktop-items-group {
+    display: none !important;
+    @include mixins.respond-to(md) {
+      display: flex !important;
+    }
+  }
+
+  &__mobile-btn {
+    display: block;
+    z-index: 100;
+    @include mixins.respond-to(md) {
+      display: none;
+    }
+    button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  &__mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: colors.$background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0s 0.4s;
+    z-index: 50;
+    
+    &--open {
+      transform: translateX(0);
+      visibility: visible;
+      opacity: 1;
+      transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0s 0s;
+    }
+  }
+
+  &__mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    font-size: 1.5rem;
+    
+    a {
+      font-size: 1.5rem;
     }
   }
   &__logo {
@@ -50,125 +137,79 @@
       object-fit: cover;
     }
   }
-  // ... (rest of the SASS)
 
-  &__items {
-    @include mixins.container;
-    @include mixins.flex-center;
-    // Set up the main container to use space-between
-    // for the three main groups (Left Group, Logo, Right Group)
-    justify-content: space-between;
-    width: 100%;
+  &__lang_switcher {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
   }
 
-  &__desktop-items-group {
-    @include mixins.flex-center;
-    // On mobile, hide this entire group
-    display: none;
-    @include mixins.respond-to(md) {
-      // On desktop, display it
-      display: flex;
+  &__lang_toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: colors.$text-third;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    padding: 4px 8px;
+    border-radius: 8px;
+
+    &:hover {
+      opacity: 1;
+      background-color: rgba(0, 0, 0, 0.05);
     }
   }
 
-  &__left-spacer {
-    // This element will only be visible on desktop
-    display: none;
-    @include mixins.respond-to(md) {
-      // Set the width of the spacer to match one of the link items
-      // plus the gap between items (15px) to balance the layout.
-      // Assuming all links have a similar minimum width, this works.
-      display: block;
-      width: 100px;
-      margin-left: 15px; // Matches the gap of the item-wrapper
-      // A safer alternative if you cannot estimate the link width:
-      // use another empty item-wrapper and hide a child.
-      // But for simple centering, this fixed width is often enough.
-      // Try using an empty item and hiding it with visibility: hidden;
-
-      // Let's use visibility: hidden on a full link element inside the wrapper for perfect alignment.
-      // However, sticking to the JSX change above:
-      // You must use a **fixed width** that is roughly the size of one link to compensate for the imbalance.
-      // If links are roughly 60px wide, and gap is 15px:
-      // width: 60px;
-      // margin-left: 15px;
-
-      // A more robust way to handle dynamic width with the existing structure:
-      // Remove header__left-spacer from JSX.
-      // Change header__desktop-items-group to use 'justify-content: flex-end;'
-      // And use the following CSS changes:
+  &__lang_icon {
+    transition: transform 0.3s ease;
+    &--open {
+      transform: rotate(180deg);
     }
   }
 
-  // *** BETTER SASS/CSS APPROACH FOR ALIGNMENT ***
-  // *If you revert the JSX back to the original `header__item-wrapper` for the left links,*
-  // *and wrap the right links in a parent container:*
+  &__lang_menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    background-color: colors.$background;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+    overflow: hidden;
+    z-index: 20;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
 
-  // Revert JSX to:
-  // <div className={styles["header__item-wrapper"]}>...home/about...</div>
-  // <Link ... large logo ... />
-  // <div className={styles["header__right-group"]}> // NEW WRAPPER
-  //    <div className={styles["header__item-wrapper"]}>...gallery/book-now/book-court...</div>
-  // </div>
+  &__lang_menu_btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: colors.$text-third;
+    padding: 10px 16px;
+    text-align: left;
+    transition: all 0.2s ease;
 
-  // And apply this SASS logic:
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      color: colors.$text-primary;
+    }
 
-  &__items {
-    @include mixins.container;
-    @include mixins.flex-center;
-    // This is the key: it allows the left wrapper to take the full width of the right wrapper
-    // and push the logo visually to the center.
-    justify-content: center;
-    width: 100%;
-
-    // Add an empty element on the left for balance (you'd need to add it to JSX)
-    .header__item-wrapper:first-of-type {
-      // This is where you would introduce the balancing negative margin
-      // or ensure the left side has the same number of items (3) as the right side.
-      // Since the right has 3 items and left has 2, the current space-between is the problem.
+    &--active {
+      color: colors.$text-primary;
+      background-color: rgba(0, 0, 0, 0.02);
+      border-left: 3px solid colors.$nyanza;
     }
   }
 
-  // --- FINAL SIMPLE SOLUTION: Flex Grow + Spacer ---
-  // Stick to the JSX with `header__desktop-items-group` and `header__left-spacer`
-
-  // In `index.module.scss`:
-
-  &__items {
-    @include mixins.container;
-    @include mixins.flex-center;
-    // Use `space-between` to create three columns: Left Group, Logo, Right Group
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  &__desktop-items-group {
-    // This is the new container for the desktop-only left items
-    display: none;
-    @include mixins.respond-to(md) {
-      display: flex;
-      // This is the key: The group on the left will take up more space
-      // to push the logo to the center relative to the right group.
-      justify-content: flex-end; // Push the actual links to the right edge of this group
-    }
-  }
-
-  &__left-spacer {
-    // This element will only be visible on desktop, hidden on mobile
-    display: none;
-    @include mixins.respond-to(md) {
-      // This element is the one that forces the center alignment.
-      // It acts as the "dummy" third item on the left side.
-      display: block;
-      // Its width and margin must exactly match one of the link items on the right side.
-      // Without knowing the font size/link width, this is a guess,
-      // but matching the gap is a good start.
-      // Since it's outside the item-wrapper, only match the width of a link.
-      // The `justify-content: space-between` on `__items` will handle the spacing.
-
-      // Let's use a fixed value that is likely wider than a link to ensure centering:
-      // (This will require fine-tuning for your exact link text/font size)
-      width: 75px;
-    }
-  }
 }
