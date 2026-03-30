@@ -10,7 +10,7 @@ import { TermsAndConditions } from "./pages/terms-and-conditions";
 import { Home } from "./pages/home/Home";
 import { Gallery } from "./pages/gallery/Gallery";
 import { NotFound } from "./pages/not-found";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
