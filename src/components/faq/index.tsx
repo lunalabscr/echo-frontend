@@ -21,10 +21,11 @@ export const Faq = () => {
       <div className={styles["wrapper__image-wrapper"]}>
         <img
           className={styles.wrapper__image}
-          src="/images/outside2-768.webp"
-          srcSet={`/images/outside2-400.webp 500w, /images/outside2-768.webp 768w, /images/outside2-1200.webp 1200w`}
+          src="/images/gallery/outside2-768.webp"
+          srcSet={`/images/gallery/outside2-400.webp 500w, /images/gallery/outside2-768.webp 768w, /images/gallery/outside2-1200.webp 1200w`}
           sizes="(max-width: 767px) 50vw, (max-width: 1199px) 100vw, 1200px"
-          alt="Outside view of the villa"
+          alt="Beautiful exterior view of Arenal Volcanic Villas showcasing Costa Rican nature"
+          loading="lazy"
         />
       </div>
       <Accordion type="multiple" className={styles.accordion}>

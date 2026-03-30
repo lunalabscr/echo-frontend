@@ -3,7 +3,7 @@ export declare const SITE_CONFIG: {
     readonly siteName: "Arenal Volcanic Villas";
     readonly supportedLangs: readonly ["en", "es", "pt"];
     readonly defaultLang: "en";
-    readonly defaultImage: "/images/drone-1200.webp";
+    readonly defaultImage: "/images/gallery/drone-1200.webp";
     readonly defaultPriceRange: "$100 - $300";
     readonly contact: {
         readonly phone: "+506-8554-3228";

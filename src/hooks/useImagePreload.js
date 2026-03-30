@@ -21,5 +21,5 @@ export const useImagePreload = (imageSrcs) => {
  * Hook to preload hero image specifically
  */
 export const useHeroImagePreload = () => {
-    useImagePreload(['/images/arenal-volcano.webp', '/images/drone-1200.webp']);
+    useImagePreload(['/images/hero/arenal-volcano.webp', '/images/gallery/drone-1200.webp']);
 };

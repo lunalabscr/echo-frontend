@@ -109,7 +109,7 @@ export const Header = () => {
             className={styles["header__logo"]}
             to="/"
           >
-            <img src="/images/AVV-10.png" />
+            <img src="/images/logos/AVV-10.png" />
           </Link>
         </div>
         

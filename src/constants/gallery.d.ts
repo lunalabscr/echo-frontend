@@ -1,2 +1,2 @@
 import type { Image } from "@/types/Image";
-export declare const galleryNotDisplayed: Image[];
+export declare const galleryImages: Image[];

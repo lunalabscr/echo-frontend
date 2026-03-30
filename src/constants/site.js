@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
     siteName: "Arenal Volcanic Villas",
     supportedLangs: ["en", "es", "pt"],
     defaultLang: "en",
-    defaultImage: "/images/drone-1200.webp",
+    defaultImage: "/images/gallery/drone-1200.webp",
     defaultPriceRange: "$100 - $300",
     contact: {
         phone: "+506-8554-3228",

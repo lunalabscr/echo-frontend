@@ -19,9 +19,9 @@ export const Hero = () => {
           {t("site-title", { defaultValue: "Arenal Volcanic Villas - Luxury Accommodation near Arenal Volcano" })}
         </h1>
         <div className={styles.hero__text}>
-          <p className={styles.hero__title} role="heading" aria-level={2}>
+          <h2 className={styles.hero__title}>
             {t("stay-near")}
-          </p>
+          </h2>
           <p className={styles.hero__subtitle}>
             {t("escape-fortuna")}
           </p>

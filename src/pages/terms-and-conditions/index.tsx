@@ -16,31 +16,31 @@ export const TermsAndConditions = () => {
     {
       name: "drone",
       alt: t("imageAlt1"),
-      default: "/images/drone-768.webp",
+      default: "/images/gallery/drone-768.webp",
       sources: [
-        "/images/drone-400.webp 500w",
-        "/images/drone-768.webp 768w",
-        "/images/drone-1200.webp 1200w",
+        "/images/gallery/drone-400.webp 500w",
+        "/images/gallery/drone-768.webp 768w",
+        "/images/gallery/drone-1200.webp 1200w",
       ],
     },
     {
       name: "kitchen2",
       alt: t("imageAlt2"),
-      default: "/images/kitchen2-768.webp",
+      default: "/images/backgrounds/kitchen2-768.webp",
       sources: [
-        "/images/kitchen2-400.webp 500w",
-        "/images/kitchen2-768.webp 768w",
-        "/images/kitchen2-1200.webp 1200w",
+        "/images/backgrounds/kitchen2-400.webp 500w",
+        "/images/backgrounds/kitchen2-768.webp 768w",
+        "/images/backgrounds/kitchen2-1200.webp 1200w",
       ],
     },
     {
       name: "outside2",
       alt: t("imageAlt3"),
-      default: "/images/outside2-768.webp",
+      default: "/images/gallery/outside2-768.webp",
       sources: [
-        "/images/outside2-400.webp 500w",
-        "/images/outside2-768.webp 768w",
-        "/images/outside2-1200.webp 1200w",
+        "/images/gallery/outside2-400.webp 500w",
+        "/images/gallery/outside2-768.webp 768w",
+        "/images/gallery/outside2-1200.webp 1200w",
       ],
     },
   ];
