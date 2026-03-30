@@ -10,9 +10,11 @@ import { TermsAndConditions } from "./pages/terms-and-conditions";
 import { Home } from "./pages/home/Home";
 import { Gallery } from "./pages/gallery/Gallery";
 import { NotFound } from "./pages/not-found";
+import { Analytics } from "@vercel/analytics/next";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
+    <Analytics />
     <I18nextProvider i18n={i18n}>
       <HelmetProvider>
         <Routes>
@@ -40,5 +42,5 @@ createRoot(document.getElementById("root")!).render(
         </Routes>
       </HelmetProvider>
     </I18nextProvider>
-  </BrowserRouter>
+  </BrowserRouter>,
 );
