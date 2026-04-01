@@ -13,8 +13,12 @@ export const Gallery = () => {
   const [ref] = useFancybox();
   const baseRoute = lang ? `/${lang}` : "";
 
-  const villaImages = galleryImages.filter(img => !img.src.includes('cancha') && !img.src.includes('pickle'));
-  const courtImages = galleryImages.filter(img => img.src.includes('cancha') || img.src.includes('pickle'));
+  const villaImages = galleryImages.filter(
+    (img) => !img.src.includes("cancha") && !img.src.includes("pickle"),
+  );
+  const courtImages = galleryImages.filter(
+    (img) => img.src.includes("cancha") || img.src.includes("pickle"),
+  );
 
   const courtMainPic = "/images/gallery/pickle-court.jpeg";
 
@@ -27,21 +31,27 @@ export const Gallery = () => {
       />
       <section ref={ref} className={styles.gallery}>
         <h1 className={styles.gallery__h1}>Arenal Volcanic Villas</h1>
-        
+
         {/* Villa Carousel */}
-        <h2 className={styles.gallery__title}>{t("title", "Stunning Villa Views.")}</h2>
-        <p className={styles.gallery__subtitle}>{t("subtitle", "Browse amenities & landscapes.")}</p>
+        <h2 className={styles.gallery__title}>
+          {t("title", "Stunning Villa Views.")}
+        </h2>
+        <p className={styles.gallery__subtitle}>
+          {t("subtitle", "Browse amenities & landscapes.")}
+        </p>
         <div className={styles["gallery__main-picture-wrapper"]}>
           <img
             data-fancybox="villa-gallery"
             className={styles["gallery__main-picture"]}
-            src="/images/gallery/gallery_main.jpeg"
-            srcSet={`/images/gallery/gallery_main.jpeg 500w, /images/gallery/gallery_main.jpeg 768w, /images/gallery/gallery_main.jpeg 1200w`}
+            src="/images/gallery/villa_front.jpeg"
+            srcSet={`/images/gallery/villa_front.jpeg 500w, /images/gallery/villa_front.jpeg 768w, /images/gallery/villa_front.jpeg 1200w`}
             sizes="(max-width: 767px) 50vw, (max-width: 1199px) 100vw, 1200px"
             alt="Aerial view of Arenal Volcanic Villas, showcasing the lush property grounds and surrounding landscape"
           />
         </div>
-        <p className={styles.gallery__subtext}>{t("click-tosee", "Click to see more images")}</p>
+        <p className={styles.gallery__subtext}>
+          {t("click-tosee", "Click to see more images")}
+        </p>
         <div className={styles["gallery__grid-gallery"]}>
           {villaImages.slice(0, 4).map((item, index) => (
             <a
@@ -74,8 +84,12 @@ export const Gallery = () => {
         </div>
 
         {/* Pickleball Court Carousel */}
-        <h2 className={styles.gallery__title}>{t("pickleballTitle", "Pickleball Court")}</h2>
-        <p className={styles.gallery__subtitle}>{t("pickleballSubtitle", "Enjoy our private courts.")}</p>
+        <h2 className={styles.gallery__title}>
+          {t("pickleballTitle", "Pickleball Court")}
+        </h2>
+        <p className={styles.gallery__subtitle}>
+          {t("pickleballSubtitle", "Enjoy our private courts.")}
+        </p>
         <div className={styles["gallery__main-picture-wrapper"]}>
           <img
             data-fancybox="court-gallery"
@@ -87,7 +101,9 @@ export const Gallery = () => {
             loading="lazy"
           />
         </div>
-        <p className={styles.gallery__subtext}>{t("click-tosee", "Click to see more images")}</p>
+        <p className={styles.gallery__subtext}>
+          {t("click-tosee", "Click to see more images")}
+        </p>
         <div className={styles["gallery__grid-gallery"]}>
           {courtImages.slice(0, 4).map((item, index) => (
             <a
