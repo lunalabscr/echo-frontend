@@ -51,7 +51,7 @@ export const WhatWeOffer = () => {
         <article key={offer.id} className={styles.offers__grid}>
           <div
             className={clsx(styles["offers__image-wrapper"], {
-              [styles["offers__order"]]: index % 2 == 0,
+              [styles["offers__order"]]: index % 2 === 0,
             })}
           >
             <img
@@ -63,9 +63,13 @@ export const WhatWeOffer = () => {
               loading="lazy"
             />
           </div>
-          <div>
-            <h3 className={styles.offers__text}>{offer.title}</h3>
-            <p className={styles.offers__subtitle}>{offer.subtitle}</p>
+          <div className={styles.offers__content}>
+            <span className={styles.offers__index}>0{index + 1}</span>
+            <div className={styles.offers__text_wrapper}>
+              <h3 className={styles.offers__title}>{offer.title}</h3>
+              <p className={styles.offers__subtitle}>{offer.subtitle}</p>
+              <div className={styles.offers__line}></div>
+            </div>
           </div>
         </article>
       ))}

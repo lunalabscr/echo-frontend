@@ -9,28 +9,74 @@
   gap: 40px;
   scroll-margin-top: 80px;
 
-  &__grid {
-    display: grid;
-    align-items: center;
-    width: 100%;
-    gap: 20px;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
 
     @include mixins.respond-to(md) {
-      grid-template-columns: 1fr 1fr;
+      padding: 0 40px;
     }
   }
 
-  &__text {
-    @include typography.font-size(lg);
+  &__index {
+    font-size: 4rem;
+    font-weight: 300;
+    color: colors.$dark-green;
+    opacity: 0.15;
+    margin-bottom: -15px; // Pulls the title into the number slightly for an editorial overlap
+    letter-spacing: 0.05em;
+    font-family: serif; // A touch of classic luxury
+    z-index: 0;
+  }
+
+  &__text_wrapper {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    @include typography.font-size(xl);
     font-weight: bold;
+    color: colors.$text-primary;
+    margin-bottom: 15px;
   }
 
   &__subtitle {
     @include typography.font-size(md);
     color: colors.$text-third;
     font-weight: 500;
+    line-height: 1.6;
+  }
+
+  &__line {
+    width: 60px;
+    height: 2px;
+    background-color: colors.$dark-green;
+    margin-top: 25px;
+    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  &__grid {
+    display: grid;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+
+    @include mixins.respond-to(md) {
+      grid-template-columns: 1fr 1fr;
+      gap: 0; // The padding inside the content will create the gap
+    }
+
+    &:hover {
+      .offers__line {
+        width: 120px;
+        background-color: colors.$light-green;
+      }
+    }
   }
 
   &__order {
@@ -41,13 +87,15 @@
 
   &__image-wrapper {
     max-width: 100%;
-    height: 300px;
+    height: 350px;
     border-radius: 0;
     overflow: hidden;
     position: relative;
 
     @include mixins.respond-to(md) {
-      height: 400px;
+      height: 450px;
+      // Pull images slightly outside regular container flow if desired, 
+      // but keeping it flush maintains the sharp design
     }
   }
 
@@ -56,5 +104,7 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.6s ease;
   }
 }
+
