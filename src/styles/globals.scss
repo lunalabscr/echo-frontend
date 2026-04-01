@@ -13,6 +13,10 @@ body {
   background-color: $background;
 }
 
+h1, h2, h3 {
+  color: $dark-green;
+}
+
 .layout {
   display: grid;
   min-height: 100vh;

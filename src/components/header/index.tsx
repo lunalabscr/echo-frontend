@@ -40,14 +40,16 @@ export const Header = () => {
 
   const handleLanguageChange = (lng: string) => {
     setIsLangOpen(false);
-    
-    const currentLangPattern = new RegExp(`^\\/(${SITE_CONFIG.supportedLangs.join('|')})(\\/|$)`);
+
+    const currentLangPattern = new RegExp(
+      `^\\/(${SITE_CONFIG.supportedLangs.join("|")})(\\/|$)`,
+    );
     const isLangInPath = currentLangPattern.test(location.pathname);
-    
+
     if (isLangInPath) {
       if (lng === SITE_CONFIG.defaultLang) {
         // Going to default lang, just remove the language from path
-        navigate(location.pathname.replace(currentLangPattern, '/'));
+        navigate(location.pathname.replace(currentLangPattern, "/"));
       } else {
         // Replace current language with new language
         navigate(location.pathname.replace(currentLangPattern, `/${lng}$2`));
@@ -55,7 +57,9 @@ export const Header = () => {
     } else {
       if (lng !== SITE_CONFIG.defaultLang) {
         // Add new language prefix
-        navigate(`/${lng}${location.pathname === '/' ? '' : location.pathname}`);
+        navigate(
+          `/${lng}${location.pathname === "/" ? "" : location.pathname}`,
+        );
       }
     }
   };
@@ -80,7 +84,6 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.header__items}>
-        
         {/* Left Side: Desktop Links */}
         <div className={styles.header__left}>
           <div className={styles["header__desktop-items-group"]}>
@@ -105,51 +108,57 @@ export const Header = () => {
 
         {/* Center Side: Logo */}
         <div className={styles.header__center}>
-          <Link
-            className={styles["header__logo"]}
-            to="/"
-          >
-            <img src="/images/logos/AVV-10.png" alt="Arenal Volcanic Villas logo" />
+          <Link className={styles["header__logo"]} to="/">
+            <img
+              src="/images/logos/AVV-01.png"
+              alt="Arenal Volcanic Villas logo"
+            />
           </Link>
         </div>
-        
+
         {/* Right Side: Options & Mobile Menu */}
         <div className={styles.header__right}>
           <div className={styles["header__item-wrapper"]}>
-            
             <Link
               to={`${baseRoute}/gallery`}
-              className={clsx(styles.header__item, styles["header__large-item"])}
+              className={clsx(
+                styles.header__item,
+                styles["header__large-item"],
+              )}
             >
               {t("gallery")}
             </Link>
             <a
               onClick={handleClick}
-              className={clsx(styles.header__item, styles["header__large-item"])}
+              className={clsx(
+                styles.header__item,
+                styles["header__large-item"],
+              )}
               href="#book"
             >
               {t("book-now")}
             </a>
 
             <div className={styles.header__lang_switcher} ref={langRef}>
-              <button 
-                className={styles.header__lang_toggle} 
+              <button
+                className={styles.header__lang_toggle}
                 onClick={() => setIsLangOpen(!isLangOpen)}
               >
                 <Globe size={18} />
                 <span>{currentLangDisplay.toUpperCase()}</span>
-                <ChevronDown 
-                  size={14} 
-                  className={clsx(styles.header__lang_icon, { 
-                    [styles['header__lang_icon--open']]: isLangOpen 
-                  })} 
+                <ChevronDown
+                  size={14}
+                  className={clsx(styles.header__lang_icon, {
+                    [styles["header__lang_icon--open"]]: isLangOpen,
+                  })}
                 />
               </button>
 
               {isLangOpen && (
                 <div className={styles.header__lang_menu}>
                   {SITE_CONFIG.supportedLangs.map((l) => {
-                    const isActive = lang === l || (l === SITE_CONFIG.defaultLang && !lang);
+                    const isActive =
+                      lang === l || (l === SITE_CONFIG.defaultLang && !lang);
                     return (
                       <button
                         key={l}
@@ -168,11 +177,19 @@ export const Header = () => {
 
             <div className={styles["header__mobile-btn"]}>
               <button onClick={() => setIsMobileOpen(!isMobileOpen)}>
-                {isMobileOpen ? <X size={28} color="black" /> : <Menu size={28} color="black" />}
+                {isMobileOpen ? (
+                  <X size={28} color="black" />
+                ) : (
+                  <Menu size={28} color="black" />
+                )}
               </button>
             </div>
 
-            <div className={clsx(styles["header__mobile-overlay"], { [styles["header__mobile-overlay--open"]]: isMobileOpen })}>
+            <div
+              className={clsx(styles["header__mobile-overlay"], {
+                [styles["header__mobile-overlay--open"]]: isMobileOpen,
+              })}
+            >
               <div className={styles["header__mobile-menu"]}>
                 <a
                   href="#about"
@@ -189,7 +206,10 @@ export const Header = () => {
                   {t("gallery")}
                 </Link>
                 <a
-                  onClick={() => { handleClick(); setIsMobileOpen(false); }}
+                  onClick={() => {
+                    handleClick();
+                    setIsMobileOpen(false);
+                  }}
                   className={styles.header__item}
                   href="#book"
                 >
@@ -197,7 +217,6 @@ export const Header = () => {
                 </a>
               </div>
             </div>
-
           </div>
         </div>
       </nav>
