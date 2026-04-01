@@ -5,13 +5,13 @@
   @include mixins.container;
   margin-block: 4rem;
 
-  padding: 2rem;
-  border-radius: 12px;
+  padding: 2rem 0;
+  border-radius: 0;
 
   .title {
     text-align: center;
     font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   /* FLEX GRID with equal widths */
@@ -23,39 +23,64 @@
   }
 
   .item {
-    background: white;
-    border-radius: 10px;
-    padding: 1rem;
+    background: transparent;
+    border-radius: 0;
+    padding: 1.5rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     cursor: pointer;
-    min-height: 115px;
-    gap: 0.5rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    min-height: 125px;
+    gap: 1rem;
+    border: 1px solid colors.$gray;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 
     /* fixed width for all items */
-    flex: 0 0 150px;
-    width: 150px;
+    flex: 0 0 160px;
+    width: 160px;
 
-    transition: transform 160ms ease, box-shadow 160ms ease;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: colors.$dark-green;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: -1;
+    }
 
     span {
       font-size: 0.95rem;
-      color: colors.$text-third;
+      color: colors.$text-primary;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      transition: color 0.4s ease;
     }
 
     svg {
       width: 28px;
       height: 28px;
-      color: colors.$light-green;
-      stroke: colors.$light-green;
+      color: colors.$dark-green;
+      stroke: colors.$dark-green;
+      transition: color 0.4s ease, stroke 0.4s ease;
     }
 
     &:hover {
-      transform: translateY(-4px) scale(1.03);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      border-color: colors.$dark-green;
+      &::before {
+        width: 100%;
+      }
+      span, svg {
+        color: colors.$background;
+        stroke: colors.$background;
+      }
     }
   }
 }

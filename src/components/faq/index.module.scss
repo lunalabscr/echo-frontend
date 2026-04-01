@@ -13,7 +13,7 @@
   &__image-wrapper {
     max-width: 100%;
     height: 300px;
-    border-radius: 8px;
+    border-radius: 0;
     overflow: hidden;
     position: relative;
 
@@ -32,19 +32,24 @@
 .accordion {
   align-self: flex-start;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 0;
   display: flex;
   flex-direction: column;
   gap: 8px;
   @include mixins.respond-to(lg) {
-    justify-content: center;
-    height: 600px;
     max-width: 600px;
   }
 
   &__item {
     width: 100%;
     border-bottom: 1px solid colors.$gray;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+
+    &[data-state="open"] {
+      border-left: 3px solid colors.$light-green;
+      background-color: rgba(colors.$light-green, 0.02);
+    }
   }
 
   &__trigger {
@@ -52,9 +57,9 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 4px;
+    padding: 16px;
     text-align: left;
-    height: 50px;
+    min-height: 50px;
     color: colors.$text-primary;
   }
 
@@ -69,6 +74,10 @@
     &[data-state="closed"] {
       animation: slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1);
     }
+  }
+
+  &__contentInner {
+    padding: 0 16px 16px 16px;
   }
 
   &__title {

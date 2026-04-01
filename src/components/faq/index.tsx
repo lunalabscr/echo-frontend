@@ -45,7 +45,9 @@ export const Faq = () => {
               </span>
             </AccordionTrigger>
             <AccordionContent className={styles.accordion__content}>
-              {faq.content}
+              <div className={styles.accordion__contentInner}>
+                {faq.content}
+              </div>
             </AccordionContent>
           </AccordionItem>
         ))}

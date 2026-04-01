@@ -46,8 +46,8 @@
     border-radius: 0;
     padding: 16px 36px;
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    color: colors.$text-primary;
-    border: 1px solid colors.$text-primary;
+    color: colors.$dark-green;
+    border: 1px solid colors.$dark-green;
     font-weight: 500;
     font-size: 0.9rem;
     letter-spacing: 2px;
@@ -64,7 +64,7 @@
       left: 0;
       width: 0%;
       height: 100%;
-      background-color: colors.$text-primary;
+      background-color: colors.$dark-green;
       transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
       z-index: -1;
     }
@@ -97,8 +97,7 @@
     width: 75%;
     height: 100%;
     object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
     z-index: 1;
   }
 
@@ -107,10 +106,9 @@
     width: 45%;
     height: 50%;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 0;
     bottom: -10%;
     left: 0;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
     z-index: 2;
     border: 8px solid colors.$background;
 
