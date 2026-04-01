@@ -94,7 +94,11 @@ export const Header = () => {
     }
   };
   return (
-    <header className={clsx(styles.header, { [styles["header--scrolled"]]: alwaysScrolled || isScrolled })}>
+    <header
+      className={clsx(styles.header, {
+        [styles["header--scrolled"]]: alwaysScrolled || isScrolled,
+      })}
+    >
       <nav className={styles.header__items}>
         {/* Left Side: Desktop Links */}
         <div className={styles.header__left}>
@@ -192,7 +196,7 @@ export const Header = () => {
                 {isMobileOpen ? (
                   <X size={28} color="black" />
                 ) : (
-                  <Menu size={28} color="black" />
+                  <Menu size={28} color="white" />
                 )}
               </button>
             </div>
