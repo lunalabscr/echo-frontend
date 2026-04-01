@@ -5,7 +5,11 @@
   @include mixins.container;
   margin-block: 4rem;
 
-  padding: 2rem 0;
+  padding: 2rem 1rem;
+
+  @include mixins.respond-to(md) {
+    padding: 2rem 0;
+  }
   border-radius: 0;
 
   .title {
@@ -85,12 +89,12 @@
   }
 }
 
-/* Responsive tweaks */
-@media (max-width: 480px) {
+/* Responsive tweaks: exactly 2 columns on mobile */
+@media (max-width: 600px) {
   .amenities {
     .item {
-      flex: 0 0 120px;
-      width: 120px;
+      flex: 0 0 calc(50% - 0.6rem);
+      width: calc(50% - 0.6rem);
     }
   }
 }
