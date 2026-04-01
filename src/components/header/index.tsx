@@ -24,6 +24,7 @@ export const Header = () => {
 
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -34,6 +35,17 @@ export const Header = () => {
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const alwaysScrolled =
+    location.pathname.includes("/gallery") ||
+    location.pathname.includes("/terms-and-conditions") ||
+    location.pathname.includes("/return-policy");
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const currentLangDisplay = lang || SITE_CONFIG.defaultLang;
@@ -82,7 +94,7 @@ export const Header = () => {
     }
   };
   return (
-    <header className={styles.header}>
+    <header className={clsx(styles.header, { [styles["header--scrolled"]]: alwaysScrolled || isScrolled })}>
       <nav className={styles.header__items}>
         {/* Left Side: Desktop Links */}
         <div className={styles.header__left}>
