@@ -43,8 +43,8 @@ export const Gallery = () => {
           <img
             data-fancybox="villa-gallery"
             className={styles["gallery__main-picture"]}
-            src="/images/gallery/villa_front.jpeg"
-            srcSet={`/images/gallery/villa_front.jpeg 500w, /images/gallery/villa_front.jpeg 768w, /images/gallery/villa_front.jpeg 1200w`}
+            src="/images/gallery/villa-front.jpeg"
+            srcSet={`/images/gallery/villa-front.jpeg 500w, /images/gallery/villa-front.jpeg 768w, /images/gallery/villa-front.jpeg 1200w`}
             sizes="(max-width: 767px) 50vw, (max-width: 1199px) 100vw, 1200px"
             alt="Aerial view of Arenal Volcanic Villas, showcasing the lush property grounds and surrounding landscape"
           />
