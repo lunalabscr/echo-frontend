@@ -36,14 +36,20 @@ export const WhatWeOffer = () => {
   ];
 
   return (
-    <section className={styles.offers} id="about" aria-labelledby="what-we-offer-heading">
-      <h2 id="what-we-offer-heading" className="sr-only">About Arenal Volcanic Villas</h2>
+    <section
+      className={styles.offers}
+      id="about"
+      aria-labelledby="what-we-offer-heading"
+    >
+      <h2 id="what-we-offer-heading" className="sr-only">
+        About Arenal Volcanic Villas
+      </h2>
       <p className={styles.offers__subtitle}>{t("about")}</p>
       {/* <br /> */}
       <p className={styles.offers__subtitle}>{t("about-2")}</p>
       {whatWeOffer.map((offer, index) => (
         <article key={offer.id} className={styles.offers__grid}>
-            <div
+          <div
             className={clsx(styles["offers__image-wrapper"], {
               [styles["offers__order"]]: index % 2 == 0,
             })}

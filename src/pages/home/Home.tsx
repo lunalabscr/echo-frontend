@@ -2,6 +2,7 @@ import { Book } from "@/components/book/Index";
 import { Faq } from "@/components/faq";
 import { Hero } from "@/components/hero";
 import { WhatWeOffer } from "@/components/whatweoffer";
+import { Location } from "@/components/location";
 import { useParams } from "react-router-dom";
 import SEO from "@/components/SEO";
 import { Amenities } from "@/components/amenities";
@@ -43,6 +44,14 @@ export const Home = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <Faq />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 75 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <Location />
       </motion.div>
       <Book />
     </>

@@ -42,19 +42,39 @@
   }
 
   &__button {
-    background-color: colors.$nyanza;
-    border-radius: 18px;
-    padding: 12px 24px;
-    transition: all 0.3s ease;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 16px 36px;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     color: colors.$text-primary;
-    border: none;
-    font-weight: bold;
-    font-size: 1.1rem;
+    border: 1px solid colors.$text-primary;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: colors.$text-primary;
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: -1;
+    }
 
     &:hover {
-      transform: scale(1.05);
-      background-color: darken(colors.$nyanza, 5%);
+      color: colors.$background;
+
+      &::before {
+        width: 100%;
+      }
     }
   }
 
