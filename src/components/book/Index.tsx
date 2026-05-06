@@ -10,7 +10,7 @@ export const Book = () => {
     keyPrefix: "book",
   });
 
-  const bookingUrl = import.meta.env.VITE_BOOKING_URL || "";
+  const bookingUrl = import.meta.env.VITE_BOOKING_URL_EN || "";
 
   return (
     <section id="book" className={styles.book}>
