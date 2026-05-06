@@ -10,14 +10,10 @@ export const Header = () => {
   const { t } = useTranslation("translation", {
     keyPrefix: "header",
   });
-  const { t: info } = useTranslation("translation", {
-    keyPrefix: "info",
-  });
 
   const navigate = useNavigate();
 
-  const phone = import.meta.env.VITE_WHATSAPP_PHONE || "";
-  const message = encodeURIComponent(info("wa-text"));
+  const bookingUrl = import.meta.env.VITE_BOOKING_URL || "";
   const { lang } = useParams();
   const location = useLocation();
   const baseRoute = lang ? `/${lang}` : "";
@@ -74,10 +70,6 @@ export const Header = () => {
         );
       }
     }
-  };
-
-  const handleClick = () => {
-    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
   };
 
   const handleHomeClick = (section: string) => {
@@ -145,12 +137,13 @@ export const Header = () => {
               {t("gallery")}
             </Link>
             <a
-              onClick={handleClick}
               className={clsx(
                 styles.header__item,
                 styles["header__large-item"],
               )}
-              href="#book"
+              href={bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {t("book-now")}
             </a>
@@ -222,12 +215,9 @@ export const Header = () => {
                   {t("gallery")}
                 </Link>
                 <a
-                  onClick={() => {
-                    handleClick();
-                    setIsMobileOpen(false);
-                  }}
                   className={styles.header__item}
-                  href="#book"
+                  href={bookingUrl}
+                  target="_blank"
                 >
                   {t("book-now")}
                 </a>

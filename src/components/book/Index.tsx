@@ -10,16 +10,7 @@ export const Book = () => {
     keyPrefix: "book",
   });
 
-  const { t: info } = useTranslation("translation", {
-    keyPrefix: "info",
-  });
-
-  const phone = import.meta.env.VITE_WHATSAPP_PHONE || "";
-  const message = encodeURIComponent(info("wa-text"));
-
-  const handleClick = () => {
-    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
-  };
+  const bookingUrl = import.meta.env.VITE_BOOKING_URL || "";
 
   return (
     <section id="book" className={styles.book}>
@@ -32,9 +23,14 @@ export const Book = () => {
       >
         <h2 className={styles.book__title}>{t("ready")}</h2>
         <p className={styles.book__subtitle}>{t("book")}</p>
-        <button onClick={handleClick} className={styles.book__button}>
+        <a
+          href={bookingUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.book__button}
+        >
           {t("book-stay")}
-        </button>
+        </a>
       </motion.div>
 
       <motion.div
