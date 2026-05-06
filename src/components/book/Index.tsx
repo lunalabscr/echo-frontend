@@ -4,13 +4,18 @@ import { motion } from "framer-motion";
 import img1 from "../../../public/images/backgrounds/livingroom3-1200.webp";
 
 import img2 from "../../../public/images/gallery/outside2-1200.webp";
+import { useParams } from "react-router-dom";
 
 export const Book = () => {
   const { t } = useTranslation("translation", {
     keyPrefix: "book",
   });
+  const { lang } = useParams();
 
-  const bookingUrl = import.meta.env.VITE_BOOKING_URL_EN || "";
+  const bookingUrl =
+    lang === "es"
+      ? import.meta.env.VITE_BOOKING_URL_ES
+      : import.meta.env.VITE_BOOKING_URL_EN;
 
   return (
     <section id="book" className={styles.book}>

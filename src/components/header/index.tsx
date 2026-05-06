@@ -13,7 +13,8 @@ export const Header = () => {
 
   const navigate = useNavigate();
 
-  const bookingUrl = import.meta.env.VITE_BOOKING_URL || "";
+  const bookingUrlEN = import.meta.env.VITE_BOOKING_URL_EN || "";
+  const bookingUrlSP = import.meta.env.VITE_BOOKING_URL_ES || "";
   const { lang } = useParams();
   const location = useLocation();
   const baseRoute = lang ? `/${lang}` : "";
@@ -22,6 +23,8 @@ export const Header = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
+
+  const currentLangBookingUrl = lang === "es" ? bookingUrlSP : bookingUrlEN;
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -141,7 +144,7 @@ export const Header = () => {
                 styles.header__item,
                 styles["header__large-item"],
               )}
-              href={bookingUrl}
+              href={currentLangBookingUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -216,7 +219,7 @@ export const Header = () => {
                 </Link>
                 <a
                   className={styles.header__item}
-                  href={bookingUrl}
+                  href={currentLangBookingUrl}
                   target="_blank"
                 >
                   {t("book-now")}
